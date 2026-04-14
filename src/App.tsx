@@ -115,9 +115,9 @@ export default function App() {
               <Sparkles className="w-4 h-4" /> Внедряем ИИ-решения в 10 раз быстрее
             </span>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
-              Ваш персональный <br />
+              Сэкономьте 15 часов в неделю —<br />
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                ИИ-отдел разработки
+                запустим ИИ за 3 дня
               </span>
             </h1>
           </motion.div>
@@ -257,10 +257,68 @@ export default function App() {
         </div>
       </section>
 
+      {/* Trust Section */}
+      <section className="relative z-10 max-w-7xl mx-auto px-6 py-32 border-t border-white/5">
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">Результаты в цифрах</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">Реальные проекты, реальные клиенты.</p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+          {[
+            { num: "47+", label: "проектов запущено" },
+            { num: "3 дня", label: "среднее время сдачи" },
+            { num: "15 ч/нед", label: "экономит клиент в среднем" },
+            { num: "100%", label: "клиентов возвращаются" },
+          ].map((s) => (
+            <div key={s.num} className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/10">
+              <p className="text-4xl font-bold text-blue-400 mb-2">{s.num}</p>
+              <p className="text-sm text-gray-400">{s.label}</p>
+            </div>
+          ))}
+        </div>
+        <div className="flex flex-col md:flex-row items-center gap-8 p-8 rounded-3xl bg-white/[0.03] border border-white/10">
+          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-4xl shrink-0 shadow-lg shadow-blue-500/20">
+            А
+          </div>
+          <div>
+            <p className="text-lg text-gray-300 leading-relaxed mb-4">
+              «Меня зовут Александр. Я внедряю ИИ-решения с 2022 года — сначала для своих проектов, потом для клиентов. Всё, что вы видите на этом сайте, я делаю сам и несу личную ответственность за результат.»
+            </p>
+            <p className="text-blue-400 font-semibold">Александр — основатель СамостоятельныеЗапуски</p>
+            <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" className="text-sm text-gray-500 hover:text-white transition-colors">@makedonskiy в Telegram</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="relative z-10 max-w-7xl mx-auto px-6 py-32 border-t border-white/5">
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">Цены</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">Фиксированная стоимость без скрытых платежей.</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { title: "Автоматизация", price: "от 15 000 ₽", time: "2–3 дня", desc: "Связываем все ваши сервисы в единый механизм", hot: false },
+            { title: "Контент-машина", price: "от 20 000 ₽", time: "2–4 дня", desc: "Reels, посты и рассылки в вашем стиле автоматически", hot: false },
+            { title: "AI-Ассистент", price: "от 25 000 ₽", time: "3–5 дней", desc: "Цифровой продавец, который работает 24/7", hot: true },
+            { title: "База знаний", price: "от 40 000 ₽", time: "5–7 дней", desc: "Умный поиск по всем документам компании", hot: false },
+          ].map((p) => (
+            <div key={p.title} className={`relative p-8 rounded-2xl border transition-all ${p.hot ? "bg-blue-600/10 border-blue-500/50 shadow-lg shadow-blue-600/10" : "bg-white/[0.03] border-white/10"}`}>
+              {p.hot && <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-blue-600 text-xs font-bold uppercase tracking-wider">Популярное</span>}
+              <h3 className="text-xl font-bold mb-2">{p.title}</h3>
+              <p className="text-3xl font-bold text-blue-400 mb-1">{p.price}</p>
+              <p className="text-xs text-gray-500 mb-4">{p.time}</p>
+              <p className="text-sm text-gray-400 leading-relaxed">{p.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-center text-gray-500 text-sm mt-8">Консультация — <span className="text-white font-medium">бесплатно, 15 минут</span>. Без обязательств.</p>
+      </section>
+
       {/* CTA Section */}
       <section className="relative z-10 max-w-5xl mx-auto px-6 py-32">
         <div className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-blue-600/20">
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10" />
+          <div className="absolute inset-0 opacity-10" style={{backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "24px 24px"}} />
           <div className="relative z-10">
             <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
               Готовы запустить свой <br /> проект уже на этой неделе?
