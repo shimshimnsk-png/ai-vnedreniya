@@ -124,6 +124,79 @@
     @keyframes f2 { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(-50px,30px) scale(1.08)} 66%{transform:translate(20px,-20px) scale(.95)} }
     @keyframes f3 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(30px,-40px)} }
 
+    /* ─── MINIAPP MODAL ────────────────────────────────────── */
+    .modal-overlay {
+      position:fixed; inset:0; z-index:1000;
+      background:rgba(0,0,0,.75); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+      display:flex; align-items:center; justify-content:center; padding:16px;
+      opacity:0; pointer-events:none; transition:opacity .3s ease;
+    }
+    .modal-overlay.open { opacity:1; pointer-events:all; }
+    .modal-box {
+      background:#0e0e11; border:1px solid rgba(255,255,255,.1);
+      border-radius:24px; width:100%; max-width:440px; max-height:90vh; overflow-y:auto;
+      transform:translateY(24px) scale(.97);
+      transition:transform .35s cubic-bezier(.16,1,.3,1);
+      position:relative;
+    }
+    .modal-overlay.open .modal-box { transform:translateY(0) scale(1); }
+    .modal-close {
+      position:absolute; top:14px; right:14px; width:30px; height:30px; border-radius:50%;
+      background:rgba(255,255,255,.08); border:none; color:#aaa; font-size:16px; cursor:pointer;
+      display:flex; align-items:center; justify-content:center; transition:background .2s;
+    }
+    .modal-close:hover { background:rgba(255,255,255,.16); color:#fff; }
+    .modal-header { padding:18px 52px 12px 20px; border-bottom:1px solid rgba(255,255,255,.06); }
+    .modal-logo { display:flex; align-items:center; gap:8px; font-weight:700; font-size:14px; }
+    .modal-logo-ico {
+      width:26px; height:26px; border-radius:7px;
+      background:linear-gradient(135deg,var(--purple),var(--cyan));
+      display:flex; align-items:center; justify-content:center;
+    }
+    .modal-progress { height:3px; background:rgba(255,255,255,.06); margin-top:10px; border-radius:2px; }
+    .modal-progress-bar { height:100%; background:linear-gradient(90deg,var(--purple),var(--cyan)); border-radius:2px; transition:width .4s ease; }
+    .modal-body { padding:20px; }
+    .ma-step { display:none; }
+    .ma-step.active { display:block; }
+    .ma-step-label { font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.1em; margin-bottom:4px; }
+    .ma-title { font-size:19px; font-weight:700; margin-bottom:16px; }
+    .ma-icon-wrap { width:64px; height:64px; border-radius:18px; background:rgba(123,97,255,.15); display:flex; align-items:center; justify-content:center; font-size:28px; margin:8px auto 16px; }
+    .ma-welcome-txt { color:var(--muted); text-align:center; margin-bottom:20px; line-height:1.6; }
+    .ma-niche-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+    .ma-niche-btn { display:flex; flex-direction:column; align-items:center; gap:7px; padding:16px 10px; border-radius:14px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.09); color:#fff; font-size:12px; font-weight:600; cursor:pointer; transition:all .2s; }
+    .ma-niche-btn:hover { border-color:rgba(123,97,255,.5); background:rgba(123,97,255,.08); }
+    .ma-niche-ico { width:36px; height:36px; border-radius:10px; background:rgba(123,97,255,.12); display:flex; align-items:center; justify-content:center; font-size:18px; }
+    .ma-svc-list { display:flex; flex-direction:column; gap:7px; }
+    .ma-svc-btn { display:flex; align-items:center; gap:10px; padding:12px; border-radius:12px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.09); color:#fff; cursor:pointer; text-align:left; transition:all .2s; }
+    .ma-svc-btn:hover { border-color:rgba(123,97,255,.5); background:rgba(123,97,255,.08); }
+    .ma-svc-ico { width:36px; height:36px; border-radius:10px; flex-shrink:0; background:rgba(123,97,255,.1); display:flex; align-items:center; justify-content:center; font-size:17px; }
+    .ma-svc-name { font-size:12px; font-weight:700; margin-bottom:2px; }
+    .ma-svc-desc { font-size:10px; color:var(--muted); line-height:1.4; }
+    .ma-svc-meta { font-size:9px; color:rgba(123,97,255,.9); font-weight:600; text-transform:uppercase; letter-spacing:.06em; margin-top:2px; }
+    .ma-tags { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:14px; }
+    .ma-tag { font-size:10px; padding:3px 8px; border-radius:6px; }
+    .ma-tag-gray { background:rgba(255,255,255,.05); color:var(--muted); border:1px solid rgba(255,255,255,.09); }
+    .ma-tag-blue { background:rgba(123,97,255,.1); color:#a78bfa; border:1px solid rgba(123,97,255,.2); }
+    .ma-form-group { margin-bottom:12px; }
+    .ma-label { font-size:12px; color:var(--muted); font-weight:500; display:block; margin-bottom:5px; }
+    .ma-input { width:100%; padding:11px 13px; border-radius:11px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); color:#fff; font-size:15px; font-family:inherit; outline:none; transition:border .2s; resize:none; }
+    .ma-input:focus { border-color:var(--purple); }
+    .ma-input.err { border-color:#ef4444; }
+    .ma-err { font-size:11px; color:#ef4444; margin-top:3px; min-height:14px; }
+    .ma-btn-primary { width:100%; padding:13px; border-radius:13px; background:linear-gradient(135deg,var(--purple),var(--magenta)); color:#fff; font-size:14px; font-weight:700; cursor:pointer; border:none; display:flex; align-items:center; justify-content:center; gap:8px; transition:opacity .2s,transform .2s; box-shadow:0 0 20px rgba(123,97,255,.3); margin-top:4px; }
+    .ma-btn-primary:hover { opacity:.9; transform:translateY(-1px); }
+    .ma-btn-primary:disabled { opacity:.5; cursor:not-allowed; transform:none; }
+    .ma-btn-secondary { width:100%; padding:12px; border-radius:13px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); color:var(--muted); font-size:13px; font-weight:600; cursor:pointer; transition:background .2s; margin-top:8px; }
+    .ma-btn-secondary:hover { background:rgba(255,255,255,.09); }
+    .ma-success { text-align:center; padding:12px 0; }
+    .ma-succ-icon { width:64px; height:64px; border-radius:50%; background:rgba(34,197,94,.15); display:flex; align-items:center; justify-content:center; font-size:28px; margin:0 auto 14px; }
+    .ma-succ-title { font-size:24px; font-weight:800; margin-bottom:8px; }
+    .ma-succ-sub { color:var(--muted); line-height:1.6; margin-bottom:20px; font-size:14px; }
+    .ma-tg-btn { display:flex; align-items:center; justify-content:center; gap:8px; width:100%; padding:13px; border-radius:13px; background:linear-gradient(135deg,var(--purple),var(--cyan)); color:#fff; font-size:14px; font-weight:700; text-decoration:none; margin-bottom:8px; transition:opacity .2s; }
+    .ma-tg-btn:hover { opacity:.9; }
+    .ma-spinner { width:16px; height:16px; border:2px solid rgba(255,255,255,.3); border-top-color:#fff; border-radius:50%; animation:spin .7s linear infinite; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+
     /* ─── NAV ──────────────────────────────────────────────── */
     .nav {
       position:fixed; top:0; left:0; right:0; z-index:100;
@@ -701,10 +774,10 @@
       </p>
 
       <div class="hero-cta rv d3">
-        <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="btn btn-p" style="font-size:16px;padding:16px 32px;">
+        <button onclick="openMiniApp()" class="btn btn-p" style="font-size:16px;padding:16px 32px;">
           Подобрать решение
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+        </button>
         <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="btn btn-s" style="font-size:16px;padding:16px 32px;">
           Написать @makedonskiy
         </a>
@@ -796,6 +869,9 @@
       </div>
     </div>
     <p class="pain-trans rv"><strong>Именно это мы решаем</strong> — быстро, без найма, без сложной настройки.</p>
+    <div class="tc rv" style="margin-top:40px;">
+      <button onclick="openMiniApp()" class="btn btn-p" style="font-size:15px;padding:14px 32px;">Подобрать решение →</button>
+    </div>
   </div>
 </section>
 
@@ -816,9 +892,9 @@
         <div class="svc-meta">
           <div><div class="svc-price">от 25 000 ₽</div><div class="svc-time">3–5 дней до запуска</div></div>
         </div>
-        <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="svc-link">
+        <button onclick="openMiniApp()" class="svc-link">
           Обсудить проект <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+        </button>
       </div>
       <div class="svc-card tilt rv d1">
         <div class="svc-ico ico-p">⚙️</div>
@@ -828,9 +904,9 @@
         <div class="svc-meta">
           <div><div class="svc-price">от 20 000 ₽</div><div class="svc-time">2–4 дня до запуска</div></div>
         </div>
-        <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="svc-link">
+        <button onclick="openMiniApp()" class="svc-link">
           Обсудить проект <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+        </button>
       </div>
       <div class="svc-card tilt rv d2">
         <div class="svc-ico ico-m">⚡</div>
@@ -840,9 +916,9 @@
         <div class="svc-meta">
           <div><div class="svc-price">от 15 000 ₽</div><div class="svc-time">2–3 дня до запуска</div></div>
         </div>
-        <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="svc-link">
+        <button onclick="openMiniApp()" class="svc-link">
           Обсудить проект <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+        </button>
       </div>
     </div>
   </div>
@@ -946,7 +1022,7 @@
           <li><span class="ck">✓</span>Инструкция по использованию</li>
           <li><span class="ck">✓</span>1 неделя поддержки</li>
         </ul>
-        <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="btn btn-s">Выбрать</a>
+        <button onclick="openMiniApp()" class="btn btn-s">Выбрать</button>
       </div>
 
       <div class="price-card pop rv d1">
@@ -965,7 +1041,7 @@
           <li><span class="ck">✓</span>2 недели поддержки</li>
           <li><span class="ck">✓</span>1 раунд правок включён</li>
         </ul>
-        <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="btn btn-p">Выбрать</a>
+        <button onclick="openMiniApp()" class="btn btn-p">Выбрать</button>
       </div>
 
       <div class="price-card rv d2">
@@ -983,7 +1059,7 @@
           <li><span class="ck">✓</span>1 месяц поддержки</li>
           <li><span class="ck">✓</span>Приоритетная связь</li>
         </ul>
-        <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="btn btn-s">Обсудить</a>
+        <button onclick="openMiniApp()" class="btn btn-s">Обсудить</button>
       </div>
 
     </div>
@@ -1054,10 +1130,10 @@
       <h2 class="section-title">Готовы запустить первый AI-процесс?</h2>
       <p class="section-sub" style="color:rgba(240,240,242,.7);">Расскажите о задаче — за 15 минут разберёмся, что поможет именно вам. Консультация бесплатно.</p>
       <div class="cta-acts">
-        <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="btn btn-p" style="font-size:16px;padding:16px 36px;">
-          Написать @makedonskiy
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.5 4.15 12.56c-.657-.204-.668-.657.136-.977l10.57-4.075c.547-.2 1.024.133.848.713z"/></svg>
-        </a>
+        <button onclick="openMiniApp()" class="btn btn-p" style="font-size:16px;padding:16px 36px;">
+          Оставить заявку
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
         <a href="#services" class="btn btn-s" style="font-size:16px;padding:16px 32px;">Посмотреть услуги</a>
       </div>
       <div class="cta-urg">
@@ -1115,6 +1191,111 @@
   </div>
 </section>
 
+<!-- MINIAPP MODAL ══════════════════════════════════════════════ -->
+<div class="modal-overlay" id="maOverlay">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeMiniApp()">✕</button>
+    <div class="modal-header">
+      <div class="modal-logo">
+        <div class="modal-logo-ico">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        Самостоятельные<span style="color:var(--cyan);">Запуски</span>
+      </div>
+      <div class="modal-progress"><div class="modal-progress-bar" id="maProgressBar" style="width:20%"></div></div>
+    </div>
+    <div class="modal-body">
+
+      <!-- WELCOME -->
+      <div class="ma-step active" id="ma-welcome">
+        <div class="ma-icon-wrap">✨</div>
+        <h2 class="ma-title" style="text-align:center;">Приветствую! 👋</h2>
+        <p class="ma-welcome-txt">Помогу рассчитать стоимость и подобрать ИИ-решение для вашего проекта за 3 шага.</p>
+        <button class="ma-btn-primary" onclick="maGoTo('select-niche')">Начать подбор →</button>
+      </div>
+
+      <!-- SELECT NICHE -->
+      <div class="ma-step" id="ma-select-niche">
+        <div class="ma-step-label">Шаг 1 из 3</div>
+        <h2 class="ma-title">К какой категории вы относитесь?</h2>
+        <div class="ma-niche-grid">
+          <button class="ma-niche-btn" onclick="maSelectNiche('Эксперт / Коуч')"><div class="ma-niche-ico">🎓</div>Эксперт / Коуч</button>
+          <button class="ma-niche-btn" onclick="maSelectNiche('Блогер')"><div class="ma-niche-ico">📱</div>Блогер</button>
+          <button class="ma-niche-btn" onclick="maSelectNiche('Малый бизнес')"><div class="ma-niche-ico">💼</div>Малый бизнес</button>
+          <button class="ma-niche-btn" onclick="maSelectNiche('Средний бизнес')"><div class="ma-niche-ico">🏢</div>Средний бизнес</button>
+          <button class="ma-niche-btn" onclick="maSelectNiche('Компания / Бренд')"><div class="ma-niche-ico">🏬</div>Компания / Бренд</button>
+          <button class="ma-niche-btn" onclick="maSelectNiche('Другое')"><div class="ma-niche-ico">👤</div>Другое</button>
+        </div>
+      </div>
+
+      <!-- SELECT SERVICE -->
+      <div class="ma-step" id="ma-select-service">
+        <div class="ma-step-label">Шаг 2 из 3</div>
+        <h2 class="ma-title">Какая задача стоит перед вами?</h2>
+        <div class="ma-svc-list">
+          <button class="ma-svc-btn" onclick="maSelectService('AI-Ассистент для продаж')">
+            <div class="ma-svc-ico">💬</div>
+            <div><div class="ma-svc-name">AI-Ассистент для продаж</div><div class="ma-svc-desc">Ведёт диалог, закрывает возражения, доводит до оплаты 24/7</div><div class="ma-svc-meta">3–5 дней • от 25к</div></div>
+          </button>
+          <button class="ma-svc-btn" onclick="maSelectService('AI Контент-машина')">
+            <div class="ma-svc-ico">⚙️</div>
+            <div><div class="ma-svc-name">AI Контент-машина</div><div class="ma-svc-desc">Reels, посты и рассылки в вашем стиле из одного видео</div><div class="ma-svc-meta">2–4 дня • от 20к</div></div>
+          </button>
+          <button class="ma-svc-btn" onclick="maSelectService('AI База знаний')">
+            <div class="ma-svc-ico">📚</div>
+            <div><div class="ma-svc-name">AI База знаний</div><div class="ma-svc-desc">Умный поиск по документам, мгновенные ответы для сотрудников</div><div class="ma-svc-meta">5–7 дней • от 40к</div></div>
+          </button>
+          <button class="ma-svc-btn" onclick="maSelectService('Системная Автоматизация')">
+            <div class="ma-svc-ico">⚡</div>
+            <div><div class="ma-svc-name">Системная Автоматизация</div><div class="ma-svc-desc">Связываем все сервисы, исключаем ошибки и операционку</div><div class="ma-svc-meta">2–3 дня • от 15к</div></div>
+          </button>
+          <button class="ma-svc-btn" onclick="maSelectService('Нужна консультация')">
+            <div class="ma-svc-ico">✨</div>
+            <div><div class="ma-svc-name">Нужна консультация</div><div class="ma-svc-desc">Подберём решение под ваш запрос бесплатно</div><div class="ma-svc-meta">15 мин • Бесплатно</div></div>
+          </button>
+        </div>
+      </div>
+
+      <!-- DETAILS -->
+      <div class="ma-step" id="ma-details">
+        <div class="ma-step-label">Шаг 3 из 3</div>
+        <h2 class="ma-title" id="ma-details-title">Расскажите об идее</h2>
+        <div class="ma-tags">
+          <span class="ma-tag ma-tag-gray">Категория: <span id="ma-details-niche"></span></span>
+          <span class="ma-tag ma-tag-blue">Выбрано: <span id="ma-details-service"></span></span>
+        </div>
+        <div class="ma-form-group">
+          <label class="ma-label">Название проекта или компании</label>
+          <input type="text" class="ma-input" id="maProject" placeholder="Напр: Мой бренд или название услуги">
+        </div>
+        <div class="ma-form-group">
+          <label class="ma-label">Описание задачи</label>
+          <textarea class="ma-input" id="maTask" rows="3" placeholder="Что нужно автоматизировать?"></textarea>
+        </div>
+        <div class="ma-form-group">
+          <label class="ma-label">Ваш Telegram или телефон <span style="color:var(--cyan)">*</span></label>
+          <input type="text" class="ma-input" id="maContact" placeholder="@username или +7..."
+            oninput="this.classList.remove('err'); document.getElementById('maContactErr').textContent=''">
+          <div class="ma-err" id="maContactErr"></div>
+        </div>
+        <button class="ma-btn-primary" id="maSubmitBtn" onclick="maSubmit()">Отправить заявку →</button>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="ma-step" id="ma-success">
+        <div class="ma-success">
+          <div class="ma-succ-icon">✅</div>
+          <div class="ma-succ-title">Готово! 🚀</div>
+          <p class="ma-succ-sub">Заявка принята. Чтобы ускорить процесс — напишите напрямую в Telegram.</p>
+          <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="ma-tg-btn">Написать @makedonskiy</a>
+          <button class="ma-btn-secondary" onclick="closeMiniApp(); maReset();">Закрыть</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <!-- BACK TO TOP ══════════════════════════════════════════════════ -->
 <button class="btt" id="btt" aria-label="Вернуться наверх">
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1149,7 +1330,7 @@
 
 <!-- Мобильный sticky CTA -->
 <div class="sticky-cta" id="scta" style="display:none;">
-  <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="btn btn-p">Написать в Telegram</a>
+  <button onclick="openMiniApp()" class="btn btn-p">Оставить заявку</button>
   <a href="#pricing" class="btn btn-s">Цены</a>
 </div>
 
@@ -1336,6 +1517,76 @@
     const btn = document.getElementById('formBtn');
     btn.disabled = false;
     btn.innerHTML = 'Отправить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+  };
+
+  // ── MiniApp Modal ────────────────────────────────────────────
+  const TG_TOKEN = '8660313325:AAFdtyoYTbYYnhT8Fxs2ySlnzx4XRbQP3Fk';
+  const TG_CHAT  = '863795906';
+  let maNiche = '', maService = '';
+
+  window.openMiniApp = function() {
+    document.getElementById('maOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    maGoTo('welcome');
+  };
+  window.closeMiniApp = function() {
+    document.getElementById('maOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  };
+  document.getElementById('maOverlay').addEventListener('click', function(e) {
+    if (e.target === this) window.closeMiniApp();
+  });
+  window.maGoTo = function(step) {
+    document.querySelectorAll('.ma-step').forEach(s => s.classList.remove('active'));
+    document.getElementById('ma-' + step).classList.add('active');
+    const p = { welcome:20, 'select-niche':40, 'select-service':70, details:100, success:100 };
+    document.getElementById('maProgressBar').style.width = (p[step] || 20) + '%';
+    document.querySelector('.modal-box').scrollTop = 0;
+  };
+  window.maSelectNiche = function(niche) { maNiche = niche; maGoTo('select-service'); };
+  window.maSelectService = function(service) {
+    maService = service;
+    document.getElementById('ma-details-niche').textContent = maNiche;
+    document.getElementById('ma-details-service').textContent = maService;
+    document.getElementById('ma-details-title').textContent =
+      service === 'Нужна консультация' ? 'О чём хотите пообщаться?' : 'Расскажите об идее';
+    maGoTo('details');
+  };
+  window.maSubmit = async function() {
+    const contact = document.getElementById('maContact').value.trim();
+    const project = document.getElementById('maProject').value.trim();
+    const task    = document.getElementById('maTask').value.trim();
+    const errEl   = document.getElementById('maContactErr');
+    const btn     = document.getElementById('maSubmitBtn');
+    if (!contact) {
+      document.getElementById('maContact').classList.add('err');
+      errEl.textContent = 'Укажите Telegram или телефон';
+      return;
+    }
+    errEl.textContent = '';
+    btn.disabled = true;
+    btn.innerHTML = '<div class="ma-spinner"></div> Отправляем...';
+    const text = `📩 Новая заявка с лендинга\n\n👤 Категория: ${maNiche}\n🔧 Услуга: ${maService}\n🏢 Проект: ${project||'—'}\n📝 Задача: ${task||'—'}\n📞 Контакт: ${contact}`;
+    try {
+      const res = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ chat_id: TG_CHAT, text })
+      });
+      if (!res.ok) throw new Error();
+      maGoTo('success');
+    } catch {
+      btn.disabled = false;
+      btn.innerHTML = 'Отправить заявку →';
+      errEl.textContent = 'Ошибка отправки. Напишите напрямую: @makedonskiy';
+    }
+  };
+  window.maReset = function() {
+    maNiche = ''; maService = '';
+    ['maProject','maTask','maContact'].forEach(id => { document.getElementById(id).value = ''; document.getElementById(id).classList && document.getElementById(id).classList.remove('err'); });
+    document.getElementById('maContactErr').textContent = '';
+    const btn = document.getElementById('maSubmitBtn');
+    btn.disabled = false; btn.innerHTML = 'Отправить заявку →';
+    maGoTo('welcome');
   };
 
   // ── Touch device fixes ───────────────────────────────────────
