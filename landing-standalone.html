@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#0a0a0b">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>СамостоятельныеЗапуски — AI-внедрения</title>
+  <title>Олеся Лиханова | Внедрение AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -49,9 +49,9 @@
     /* ─── TYPOGRAPHY ───────────────────────────────────────── */
     .badge {
       display: inline-flex; align-items: center; gap: 8px;
-      padding: 6px 16px; border-radius: 999px;
-      background: rgba(0,217,255,0.08); border: 1px solid rgba(0,217,255,0.2);
-      color: var(--cyan); font-size: 13px; font-weight: 500;
+      padding: 9px 22px; border-radius: 999px;
+      background: rgba(0,217,255,0.12); border: 1px solid rgba(0,217,255,0.35);
+      color: var(--cyan); font-size: 14px; font-weight: 600;
       margin-bottom: 20px;
       animation: badgePulse 3s ease-in-out infinite;
     }
@@ -218,15 +218,15 @@
       display:flex; align-items:center; justify-content:center; flex-shrink:0; color:#fff;
     }
     .logo .a { color:var(--cyan); }
-    .nav-links { display:flex; align-items:center; gap:32px; list-style:none; flex:1; }
-    .nav-links a { font-size:14px; font-weight:500; color:var(--muted); transition:color .2s; }
+    .nav-links { display:flex; align-items:center; gap:20px; list-style:none; flex:1; justify-content:center; white-space:nowrap; }
+    .nav-links a { font-size:13px; font-weight:500; color:var(--muted); transition:color .2s; }
     .nav-links a:hover { color:var(--text); }
     .nav-r { display:flex; align-items:center; gap:12px; }
     .tg-link {
       display:flex; align-items:center; gap:6px;
-      font-size:13px; font-weight:500; color:var(--muted); transition:color .2s;
+      font-size:13px; font-weight:500; color:var(--cyan); transition:opacity .2s;
     }
-    .tg-link:hover { color:var(--cyan); }
+    .tg-link:hover { opacity:.75; }
     .burger { display:none; background:none; flex-direction:column; gap:5px; width:36px; padding:6px; }
     .burger span { display:block; height:2px; width:22px; border-radius:2px; background:var(--text); transition:all .25s ease; }
     .burger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
@@ -246,7 +246,7 @@
     .hero-wrap {
       position:relative; z-index:1;
       display:flex; flex-direction:column; align-items:center;
-      text-align:center; padding:80px 0 60px;
+      text-align:center; padding:100px 0 80px;
     }
     .h1 {
       font-size:clamp(38px,7vw,72px); font-weight:900;
@@ -259,7 +259,24 @@
     .hero-cta { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; }
 
     /* chat mockup */
-    .mockup { position:relative; z-index:1; margin-top:72px; width:100%; max-width:680px; }
+    .mockup { position:relative; z-index:1; margin-top:120px; width:100%; max-width:1100px; }
+    .mockup-row { display:flex; gap:20px; align-items:flex-start; }
+    .mockup-item { flex:1; position:relative; min-width:0; }
+    .fcards-l { position:absolute; top:-20px; right:20px; display:flex; flex-direction:column; gap:8px; }
+    .crm-leads { display:flex; flex-direction:column; gap:7px; margin-bottom:12px; }
+    .crm-lead { display:flex; align-items:center; gap:9px; padding:8px 10px; border-radius:10px; background:var(--bg-subtle); border:1px solid var(--border); }
+    .crm-src { font-size:15px; flex-shrink:0; }
+    .crm-info { flex:1; min-width:0; }
+    .crm-name { font-size:12px; font-weight:600; margin-bottom:1px; }
+    .crm-msg { font-size:13px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .crm-time { font-size:10px; color:var(--muted); flex-shrink:0; }
+    .crm-dot { width:7px; height:7px; border-radius:50%; background:#22c55e; flex-shrink:0; }
+    .crm-ai { border-radius:12px; padding:12px; background:linear-gradient(135deg,rgba(123,97,255,.18),rgba(0,217,255,.08)); border:1px solid rgba(123,97,255,.3); }
+    .crm-ai-tag { font-size:10px; font-weight:700; color:var(--cyan); text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .crm-ai-label { color:var(--muted); font-size:10px; }
+    .crm-ai-val { font-size:11px; font-weight:700; }
+    .crm-ai-text { font-size:11px; color:var(--muted); line-height:1.55; border-left:2px solid var(--purple); padding-left:8px; margin-top:6px; margin-bottom:8px; }
+    .crm-ai-copy { display:inline-flex; align-items:center; gap:5px; padding:5px 12px; border-radius:7px; background:var(--purple); color:#fff; font-size:11px; font-weight:600; cursor:pointer; border:none; }
     .chat-win {
       background:rgba(17,17,20,.92); border:1px solid var(--border); border-radius:20px;
       padding:20px; backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
@@ -314,7 +331,7 @@
     .sl { font-size:14px; color:var(--muted); margin-top:6px; }
 
     /* ─── PAIN ─────────────────────────────────────────────── */
-    .pain-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-top:56px; }
+    .pain-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:56px; }
     .pain-card {
       padding:28px; border-radius:20px; background:var(--bg-subtle); border:1px solid var(--border);
       transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
@@ -384,7 +401,16 @@
 
     /* ─── PROOF ────────────────────────────────────────────── */
     #proof { scroll-margin-top:var(--nav-h); }
+    .proof-slider { position:relative; margin-top:56px; overflow:hidden; }
+    .proof-track { display:flex; gap:20px; transition:transform .45s cubic-bezier(.16,1,.3,1); }
     .proof-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:56px; }
+    .proof-slide { flex:0 0 calc(33.333% - 14px); }
+    .proof-nav { display:flex; align-items:center; justify-content:center; gap:12px; margin-top:28px; }
+    .proof-arrow { width:44px; height:44px; border-radius:50%; border:1px solid var(--border); background:var(--bg-subtle); color:var(--text); display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all .2s; flex-shrink:0; }
+    .proof-arrow:hover { border-color:var(--purple); background:rgba(123,97,255,.15); color:var(--purple); }
+    .proof-dots { display:flex; gap:6px; }
+    .proof-dot { width:8px; height:8px; border-radius:50%; background:var(--border); transition:all .3s; cursor:pointer; }
+    .proof-dot.active { background:var(--purple); width:24px; border-radius:4px; }
     .proof-card {
       padding:28px; border-radius:20px; background:var(--bg-subtle); border:1px solid var(--border);
       display:flex; flex-direction:column; gap:16px;
@@ -442,8 +468,8 @@
     .ck { flex-shrink:0; width:18px; height:18px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; margin-top:1px; background:rgba(34,197,94,.15); color:#22c55e; }
     .price-card .btn { width:100%; justify-content:center; margin-top:auto; }
     hr.div { border:none; border-top:1px solid var(--border); }
-    .p-note { font-size:12px; color:var(--muted); text-align:center; margin-top:24px; }
-    .p-note a { color:var(--cyan); }
+    .p-note { font-size:16px; color:var(--text); text-align:center; margin-top:48px; padding:20px; }
+    .p-note a { color:var(--cyan); font-weight:600; text-decoration:underline; text-underline-offset:3px; }
 
     /* ─── FAQ ──────────────────────────────────────────────── */
     #faq { scroll-margin-top:var(--nav-h); }
@@ -481,8 +507,8 @@
     .cta-box>*{position:relative;z-index:1;}
     .cta-acts { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:36px; }
     .cta-urg {
-      margin-top:20px; font-size:13px; color:var(--muted);
-      display:flex; align-items:center; justify-content:center; gap:6px;
+      margin-top:24px; font-size:16px; color:#fff; font-weight:500;
+      display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap;
     }
     .dot { width:6px; height:6px; border-radius:50%; background:#22c55e; display:inline-block; animation:pu 2s infinite; }
     @keyframes pu{0%,100%{opacity:1}50%{opacity:.4}}
@@ -680,7 +706,8 @@
       .price-grid{grid-template-columns:1fr}
       .how-grid{grid-template-columns:1fr 1fr}
       .how-grid::before{display:none}
-      .fcards{display:none}
+      .fcards,.fcards-l{display:none}
+      .mockup-row{flex-direction:column}
       .sticky-cta{display:flex}
       body{padding-bottom:74px}
     }
@@ -720,19 +747,19 @@
           <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
         </svg>
       </div>
-      Самостоятельные<span class="a">Запуски</span>
+      Олеся Лиханова<span class="a"> | Внедрение AI</span>
     </a>
     <ul class="nav-links">
       <li><a href="#services">Услуги</a></li>
       <li><a href="#how">Как работаем</a></li>
       <li><a href="#pricing">Цены</a></li>
       <li><a href="#proof">Отзывы</a></li>
+      <li><a href="#about">Обо мне</a></li>
       <li><a href="#contact">Контакты</a></li>
     </ul>
     <div class="nav-r">
       <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="tg-link">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.5 4.15 12.56c-.657-.204-.668-.657.136-.977l10.57-4.075c.547-.2 1.024.133.848.713z"/></svg>
-        @makedonskiy
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.5 4.15 12.56c-.657-.204-.668-.657.136-.977l10.57-4.075c.547-.2 1.024.133.848.713z"/></svg>
       </a>
       <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="btn btn-p" style="padding:10px 20px;font-size:14px;">Начать проект</a>
       <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
@@ -746,7 +773,7 @@
   <a href="#pricing" class="ml">Цены</a>
   <a href="#proof" class="ml">Отзывы</a>
   <a href="#contact" class="ml">Контакты</a>
-  <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="btn btn-p" style="margin-top:8px;">Написать @makedonskiy</a>
+  <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="btn btn-p" style="margin-top:8px;">Написать в Telegram</a>
 </div>
 
 <!-- HERO ═══════════════════════════════════════════════════════ -->
@@ -761,54 +788,130 @@
 
       <div class="badge rv">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        Внедряем AI за 3–5 дней &nbsp;·&nbsp; Более 30 запущенных проектов
+        Внедряю AI от 3-х дней &nbsp;·&nbsp; Более 30 запущенных проектов
       </div>
 
       <h1 class="h1 rv d1">
-        Получите AI-сотрудника,<br>
-        который работает <span class="grad">за вас 24/7</span>
+        Ваш бизнес не должен<br>
+        держаться <span class="grad">только на вас</span>
       </h1>
 
       <p class="hero-sub rv d2">
-        Создаём AI-ассистентов, контент-машины и базы знаний для коучей, блогеров и малого бизнеса. От идеи до работающего продукта — за 3–5 дней.
+        Внедряю AI-решения для бизнеса, экспертов, блогеров и коучей, у которых всё держится на себе, а рост упирается в хаос, ручную работу и потери денег.
       </p>
 
-      <div class="hero-cta rv d3">
+      <div class="rv d3" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:56px;">
+        <span style="display:inline-flex;align-items:center;gap:7px;padding:8px 18px;border-radius:999px;background:rgba(123,97,255,.12);border:1px solid rgba(123,97,255,.3);font-size:14px;font-weight:600;box-shadow:0 0 18px rgba(123,97,255,.18);">👔 Собственникам бизнеса</span>
+        <span style="display:inline-flex;align-items:center;gap:7px;padding:8px 18px;border-radius:999px;background:rgba(0,217,255,.1);border:1px solid rgba(0,217,255,.28);font-size:14px;font-weight:600;box-shadow:0 0 18px rgba(0,217,255,.15);">🎓 Коучам и экспертам</span>
+        <span style="display:inline-flex;align-items:center;gap:7px;padding:8px 18px;border-radius:999px;background:rgba(236,72,153,.1);border:1px solid rgba(236,72,153,.28);font-size:14px;font-weight:600;box-shadow:0 0 18px rgba(236,72,153,.15);">📱 Блогерам</span>
+        <span style="display:inline-flex;align-items:center;gap:7px;padding:8px 18px;border-radius:999px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.28);font-size:14px;font-weight:600;box-shadow:0 0 18px rgba(34,197,94,.15);">🚀 Онлайн-школам</span>
+      </div>
+
+      <div class="hero-cta rv d4">
         <button onclick="openMiniApp()" class="btn btn-p" style="font-size:16px;padding:16px 32px;">
           Подобрать решение
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </button>
         <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="btn btn-s" style="font-size:16px;padding:16px 32px;">
-          Написать @makedonskiy
+          Написать в Telegram
         </a>
       </div>
 
       <div class="mockup rv d4">
-        <div style="position:relative;">
-          <div class="chat-win">
-            <div class="chat-hdr">
-              <div class="c-ava">🤖</div>
-              <div>
-                <div style="font-size:14px;font-weight:600;">AI-ассистент Анны</div>
-                <div class="c-status">онлайн 24/7</div>
+        <div class="mockup-row">
+
+          <!-- Блок 1: AI-ассистент -->
+          <div class="mockup-item">
+            <div class="chat-win">
+              <div class="chat-hdr">
+                <div class="c-ava">🤖</div>
+                <div>
+                  <div style="font-size:16px;font-weight:700;">AI-ассистент Анны</div>
+                  <div class="c-status">онлайн 24/7</div>
+                </div>
+              </div>
+              <div class="msgs">
+                <div class="msg mi">Здравствуйте! Интересует ваш курс. Сколько стоит?</div>
+                <div class="msg mo">Привет! Курс «Осознанная жизнь» — 15 900 ₽. Включает 8 модулей и 2 живых созвона. Хотите записаться?</div>
+                <div class="msg mi">Да, как оплатить?</div>
+                <div class="msg mo">Вот ссылка 👉 pay.example.com — занимает 2 минуты. После оплаты доступ откроется автоматически 🚀</div>
+                <div class="msg mi mok">✅ Оплата прошла успешно</div>
+                <div class="msg mo">Поздравляю! Доступ уже открыт. Увидимся на первом модуле 🎉</div>
+                <div class="msg mi">
+                  <div class="typing"><div class="td"></div><div class="td"></div><div class="td"></div></div>
+                </div>
               </div>
             </div>
-            <div class="msgs">
-              <div class="msg mi">Здравствуйте! Интересует ваш курс. Сколько стоит?</div>
-              <div class="msg mo">Привет! Курс «Осознанная жизнь» — 15 900 ₽. Включает 8 модулей и 2 живых созвона. Хотите записаться?</div>
-              <div class="msg mi">Да, как оплатить?</div>
-              <div class="msg mo">Вот ссылка 👉 pay.example.com — занимает 2 минуты. После оплаты доступ откроется автоматически 🚀</div>
-              <div class="msg mi mok">✅ Оплата прошла успешно</div>
-              <div class="msg mo">Поздравляю! Доступ уже открыт. Увидимся на первом модуле 🎉</div>
-              <div class="msg mi">
-                <div class="typing"><div class="td"></div><div class="td"></div><div class="td"></div></div>
-              </div>
+            <div class="fcards-l">
+              <div class="fcard"><div class="fv">+847</div><div class="fl">лидов этот месяц</div></div>
+              <div class="fcard"><div class="fv" style="color:var(--purple);">−12 ч</div><div class="fl">экономия в неделю</div></div>
             </div>
           </div>
-          <div class="fcards">
-            <div class="fcard"><div class="fv">+847</div><div class="fl">лидов этот месяц</div></div>
-            <div class="fcard"><div class="fv" style="color:var(--purple);">−12 ч</div><div class="fl">экономия в неделю</div></div>
+
+          <!-- Блок 2: AI CRM -->
+          <div class="mockup-item">
+            <div class="chat-win">
+              <div class="chat-hdr">
+                <div class="c-ava" style="background:linear-gradient(135deg,#a855f7,#ec4899);">📊</div>
+                <div>
+                  <div style="font-size:16px;font-weight:700;">AI CRM · Умные заявки</div>
+                  <div class="c-status">4 источника активны</div>
+                </div>
+              </div>
+              <div class="crm-leads">
+                <div class="crm-lead">
+                  <span class="crm-src">💬</span>
+                  <div class="crm-info">
+                    <div class="crm-name">Марина К. — Telegram</div>
+                    <div class="crm-msg">«Интересует ваш курс, подскажите...»</div>
+                  </div>
+                  <span class="crm-time">2 мин</span>
+                  <div class="crm-dot"></div>
+                </div>
+                <div class="crm-lead">
+                  <span class="crm-src">📸</span>
+                  <div class="crm-info">
+                    <div class="crm-name">Дмитрий С. — Instagram</div>
+                    <div class="crm-msg">«Сколько стоит консультация?»</div>
+                  </div>
+                  <span class="crm-time">5 мин</span>
+                  <div class="crm-dot" style="background:var(--cyan);"></div>
+                </div>
+                <div class="crm-lead">
+                  <span class="crm-src">🌐</span>
+                  <div class="crm-info">
+                    <div class="crm-name">Елена В. — Сайт</div>
+                    <div class="crm-msg">«Оставила заявку на разбор»</div>
+                  </div>
+                  <span class="crm-time">12 мин</span>
+                  <div class="crm-dot" style="background:rgba(107,114,128,.4);"></div>
+                </div>
+                <div class="crm-lead">
+                  <span class="crm-src">📱</span>
+                  <div class="crm-info">
+                    <div class="crm-name">Алексей П. — WhatsApp</div>
+                    <div class="crm-msg">«Есть ли рассрочка на оплату?»</div>
+                  </div>
+                  <span class="crm-time">18 мин</span>
+                  <div class="crm-dot" style="background:rgba(107,114,128,.4);"></div>
+                </div>
+              </div>
+              <div class="crm-ai">
+                <div class="crm-ai-tag">⚡ AI рекомендует написать сейчас</div>
+                <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:6px;">
+                  <div><span class="crm-ai-label">Кому: </span><span class="crm-ai-val">Марина К.</span></div>
+                  <div><span class="crm-ai-label">Почему: </span><span style="font-size:11px;color:var(--muted);">Горячий лид — написала 2 мин назад, интерес не остыл</span></div>
+                </div>
+                <div class="crm-ai-text">Марина, добрый день! Вижу, вас интересует курс — расскажу подробно. Удобно созвониться сегодня? 🙌</div>
+                <button class="crm-ai-copy">📋 Скопировать текст</button>
+              </div>
+            </div>
+            <div class="fcards">
+              <div class="fcard"><div class="fv">×3</div><div class="fl">конверсия выше</div></div>
+              <div class="fcard"><div class="fv" style="color:#ec4899;">4 src</div><div class="fl">источника заявок</div></div>
+            </div>
           </div>
+
         </div>
       </div>
 
@@ -848,27 +951,43 @@
     </div>
     <div class="pain-grid">
       <div class="pain-card rv">
-        <div class="pain-ico" style="background:rgba(0,217,255,.1);">🕐</div>
-        <div class="pain-t">Тонете в одинаковых вопросах</div>
-        <div class="pain-d">Одно и то же по 20 раз в день — в DM, Email, WhatsApp. Каждый ответ отнимает ваше время и фокус.</div>
+        <div class="pain-ico" style="background:rgba(123,97,255,.1);">🎓</div>
+        <div style="font-size:11px;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">Коуч / Эксперт</div>
+        <div class="pain-t">Вы эксперт — а тратите время на переписки</div>
+        <div class="pain-d">Клиенты спрашивают одно и то же в директ, запись на консультации идёт через вас лично, ответы ждут часами. Экспертиза простаивает — вы в операционке.</div>
       </div>
       <div class="pain-card rv d1">
-        <div class="pain-ico" style="background:rgba(123,97,255,.1);">📈</div>
-        <div class="pain-t">Доход упёрся в ваше время</div>
-        <div class="pain-d">Чтобы зарабатывать больше — нужно работать больше. Масштабироваться без роста затрат не получается.</div>
+        <div class="pain-ico" style="background:rgba(236,72,153,.1);">📱</div>
+        <div style="font-size:11px;font-weight:700;color:#ec4899;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">Блогер</div>
+        <div class="pain-t">Контент пожирает всё ваше время</div>
+        <div class="pain-d">Снимаете, монтируете, пишете, отвечаете в DM — на стратегию и рост времени не остаётся. Алгоритмы требуют всё больше, а вы и так на пределе.</div>
       </div>
       <div class="pain-card rv d2">
-        <div class="pain-ico" style="background:rgba(255,110,0,.1);">⚡</div>
-        <div class="pain-t">Теряете клиентов из-за скорости</div>
-        <div class="pain-d">Пока думали — клиент ушёл к тому, кто ответил через минуту. В 2026 году скорость = выручка.</div>
+        <div class="pain-ico" style="background:rgba(0,217,255,.1);">🚀</div>
+        <div style="font-size:11px;font-weight:700;color:var(--cyan);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">Онлайн-школа / Инфобизнес</div>
+        <div class="pain-t">Продажи работают только когда работаете вы</div>
+        <div class="pain-d">Без вашего личного участия воронка встаёт. Курсы продаются только во время запуска, остальное время — тишина. Масштаб упирается в вас.</div>
+      </div>
+      <div class="pain-card rv d1">
+        <div class="pain-ico" style="background:rgba(255,110,0,.1);">💼</div>
+        <div style="font-size:11px;font-weight:700;color:#f97316;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">Малый бизнес (услуги)</div>
+        <div class="pain-t">Заявки теряются, клиенты уходят к конкурентам</div>
+        <div class="pain-d">Пропущенные звонки, долгие ответы, менеджер не успел — и клиент уже у другого. Без системы каждый пропущенный контакт это потерянные деньги.</div>
+      </div>
+      <div class="pain-card rv d2">
+        <div class="pain-ico" style="background:rgba(34,197,94,.1);">⚙️</div>
+        <div style="font-size:11px;font-weight:700;color:#22c55e;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">Собственник / Предприниматель</div>
+        <div class="pain-t">Работаете В бизнесе, а не НА бизнес</div>
+        <div class="pain-d">Операционка съедает всё время. Задачи копятся, делегировать некому или некогда обучить. На развитие и стратегию сил уже нет.</div>
       </div>
       <div class="pain-card rv d3">
-        <div class="pain-ico" style="background:rgba(34,197,94,.1);">💸</div>
-        <div class="pain-t">Нанимать сотрудников дорого</div>
-        <div class="pain-d">Поиск, обучение, зарплата, больничные. Полгода до нормальной работы — и результат не гарантирован.</div>
+        <div class="pain-ico" style="background:rgba(168,85,247,.1);">👥</div>
+        <div style="font-size:11px;font-weight:700;color:#a855f7;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;">Команда / Агентство</div>
+        <div class="pain-t">Рутина убивает скорость и прибыль</div>
+        <div class="pain-d">Одни и те же вопросы от клиентов, ручная обработка заявок, хаос в коммуникациях между инструментами. Команда тонет в задачах — масштаб невозможен.</div>
       </div>
     </div>
-    <p class="pain-trans rv"><strong>Именно это мы решаем</strong> — быстро, без найма, без сложной настройки.</p>
+    <p class="pain-trans rv"><strong>Узнали себя?</strong> — именно для вас я и создаю AI-решения.</p>
     <div class="tc rv" style="margin-top:40px;">
       <button onclick="openMiniApp()" class="btn btn-p" style="font-size:15px;padding:14px 32px;">Подобрать решение →</button>
     </div>
@@ -879,46 +998,108 @@
 <section class="section" id="services" style="border-top:1px solid var(--border);">
   <div class="container">
     <div class="tc rv">
-      <div class="badge">Что мы создаём</div>
-      <h2 class="section-title">Три AI-инструмента, которые работают за вас</h2>
-      <p class="section-sub">Выберите то, что подходит вашей задаче — или напишите нам, и подберём сами.</p>
+      <div class="badge">Что я создаю</div>
+      <h2 class="section-title">AI-решения от простого к системному</h2>
+      <p class="section-sub">Каждый найдёт своё — или возьмёт несколько и выстроит полноценную AI-систему. Напишите мне, и подберём вместе.</p>
     </div>
-    <div class="svc-grid">
+
+    <!-- Уровень 1 -->
+    <div style="margin-top:48px;margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--cyan);">Уровень 1 — Базовые инструменты</div>
+      <div style="flex:1;height:1px;background:var(--border);"></div>
+      <div style="font-size:12px;color:var(--muted);">от 20 000 ₽</div>
+    </div>
+    <div class="svc-grid" style="margin-top:12px;">
       <div class="svc-card tilt rv">
         <div class="svc-ico ico-c">💬</div>
-        <div class="svc-tag">Для коучей и бизнеса</div>
-        <div class="svc-t">AI-Ассистент для продаж</div>
-        <div class="svc-d">Отвечает на вопросы, закрывает возражения, записывает на встречи — в Telegram, WhatsApp, на сайте. Работает 24/7 в вашем стиле.</div>
-        <div class="svc-meta">
-          <div><div class="svc-price">от 25 000 ₽</div><div class="svc-time">3–5 дней до запуска</div></div>
-        </div>
-        <button onclick="openMiniApp()" class="svc-link">
-          Обсудить проект <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </button>
+        <div class="svc-tag">Коучи · Эксперты · Фрилансеры</div>
+        <div class="svc-t">AI-ассистент в мессенджере</div>
+        <div class="svc-d">Отвечает клиентам в Telegram или WhatsApp за вас — на вопросы, возражения, записывает на консультацию. Вы перестаёте быть дежурным по переписке.</div>
+        <div class="svc-meta"><div><div class="svc-price">от 20 000 ₽</div><div class="svc-time">3–4 дня</div></div></div>
+        <button onclick="openMiniApp()" class="svc-link">Обсудить проект <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
       </div>
       <div class="svc-card tilt rv d1">
-        <div class="svc-ico ico-p">⚙️</div>
-        <div class="svc-tag">Для блогеров и экспертов</div>
+        <div class="svc-ico ico-p">✍️</div>
+        <div class="svc-tag">Блогеры · Эксперты · Онлайн-школы</div>
         <div class="svc-t">AI Контент-машина</div>
-        <div class="svc-d">Из одного видео или голосового — посты для всех соцсетей, email-рассылки, Reels. В вашем голосе и стиле, без копирайтера.</div>
-        <div class="svc-meta">
-          <div><div class="svc-price">от 20 000 ₽</div><div class="svc-time">2–4 дня до запуска</div></div>
-        </div>
-        <button onclick="openMiniApp()" class="svc-link">
-          Обсудить проект <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </button>
+        <div class="svc-d">Записали 10 минут голоса или видео — получили посты, рилс, email и сторис для всех платформ в вашем стиле. Контент идёт каждый день без вашего участия.</div>
+        <div class="svc-meta"><div><div class="svc-price">от 25 000 ₽</div><div class="svc-time">3–5 дней</div></div></div>
+        <button onclick="openMiniApp()" class="svc-link">Обсудить проект <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
       </div>
       <div class="svc-card tilt rv d2">
-        <div class="svc-ico ico-m">⚡</div>
-        <div class="svc-tag">Для малого и среднего бизнеса</div>
-        <div class="svc-t">Системная автоматизация</div>
-        <div class="svc-d">Связываем все ваши сервисы: CRM, мессенджеры, оплаты, уведомления. Исключаем ручной труд и ошибки, освобождаем команду.</div>
-        <div class="svc-meta">
-          <div><div class="svc-price">от 15 000 ₽</div><div class="svc-time">2–3 дня до запуска</div></div>
-        </div>
-        <button onclick="openMiniApp()" class="svc-link">
-          Обсудить проект <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </button>
+        <div class="svc-ico ico-m">📚</div>
+        <div class="svc-tag">Команды · Агентства · Бизнес</div>
+        <div class="svc-t">AI База знаний</div>
+        <div class="svc-d">Корпоративный AI, который знает ваши регламенты, скрипты и ответы на все вопросы. Сотрудники перестают отвлекать вас — спрашивают базу.</div>
+        <div class="svc-meta"><div><div class="svc-price">от 35 000 ₽</div><div class="svc-time">4–6 дней</div></div></div>
+        <button onclick="openMiniApp()" class="svc-link">Обсудить проект <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      </div>
+    </div>
+
+    <!-- Уровень 2 -->
+    <div style="margin-top:40px;margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--purple);">Уровень 2 — Умные системы</div>
+      <div style="flex:1;height:1px;background:var(--border);"></div>
+      <div style="font-size:12px;color:var(--muted);">от 55 000 ₽</div>
+    </div>
+    <div class="svc-grid" style="margin-top:12px;">
+      <div class="svc-card tilt rv">
+        <div class="svc-ico" style="background:rgba(123,97,255,.12);">🎯</div>
+        <div class="svc-tag">Онлайн-школы · Эксперты · B2B</div>
+        <div class="svc-t">AI Воронка продаж</div>
+        <div class="svc-d">Бот сам квалифицирует лидов, прогревает серией сообщений, записывает на созвон или демо. Продажи идут без менеджера — пока вы спите.</div>
+        <div class="svc-meta"><div><div class="svc-price">от 55 000 ₽</div><div class="svc-time">5–8 дней</div></div></div>
+        <button onclick="openMiniApp()" class="svc-link">Обсудить проект <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      </div>
+      <div class="svc-card tilt rv d1">
+        <div class="svc-ico" style="background:rgba(236,72,153,.1);">📊</div>
+        <div class="svc-tag">Малый бизнес · Агентства · Услуги</div>
+        <div class="svc-t">AI CRM с умными подсказками</div>
+        <div class="svc-d">Собирает заявки из Telegram, Instagram, сайта и WhatsApp. AI анализирует — и говорит кому, когда и что написать. Ни один лид не уйдёт без ответа.</div>
+        <div class="svc-meta"><div><div class="svc-price">от 70 000 ₽</div><div class="svc-time">7–10 дней</div></div></div>
+        <button onclick="openMiniApp()" class="svc-link">Обсудить проект <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      </div>
+      <div class="svc-card tilt rv d2">
+        <div class="svc-ico" style="background:rgba(34,197,94,.1);">🚀</div>
+        <div class="svc-tag">Онлайн-школы · Сервисы · HR</div>
+        <div class="svc-t">AI Онбординг-система</div>
+        <div class="svc-d">Новый клиент или сотрудник — AI встречает, обучает, тестирует, напоминает и отвечает на вопросы. Вы включаетесь только там, где нужен живой человек.</div>
+        <div class="svc-meta"><div><div class="svc-price">от 90 000 ₽</div><div class="svc-time">7–10 дней</div></div></div>
+        <button onclick="openMiniApp()" class="svc-link">Обсудить проект <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      </div>
+    </div>
+
+    <!-- Уровень 3 -->
+    <div style="margin-top:40px;margin-bottom:12px;display:flex;align-items:center;gap:12px;">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#ec4899;">Уровень 3 — Комплексные AI-системы</div>
+      <div style="flex:1;height:1px;background:var(--border);"></div>
+      <div style="font-size:12px;color:var(--muted);">от 200 000 ₽</div>
+    </div>
+    <div class="svc-grid" style="margin-top:12px;">
+      <div class="svc-card tilt rv">
+        <div class="svc-ico" style="background:rgba(249,115,22,.1);">⚡</div>
+        <div class="svc-tag">Бизнес с потоком заявок · Услуги</div>
+        <div class="svc-t">AI Отдел продаж</div>
+        <div class="svc-d">Полноценный AI-менеджер: принимает заявки, квалифицирует, презентует, закрывает, работает с возражениями и передаёт в CRM. Заменяет 2–3 менеджеров по продажам.</div>
+        <div class="svc-meta"><div><div class="svc-price">от 200 000 ₽</div><div class="svc-time">14–21 день</div></div></div>
+        <button onclick="openMiniApp()" class="svc-link">Обсудить проект <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      </div>
+      <div class="svc-card tilt rv d1">
+        <div class="svc-ico" style="background:rgba(168,85,247,.12);">🏭</div>
+        <div class="svc-tag">Средний бизнес · Команды 10+</div>
+        <div class="svc-t">AI Операционный центр</div>
+        <div class="svc-d">Единая AI-система для всего бизнеса: заявки, коммуникации, отчёты, контент, аналитика и уведомления — всё автоматизировано и связано. Команда занимается только людьми и решениями.</div>
+        <div class="svc-meta"><div><div class="svc-price">от 450 000 ₽</div><div class="svc-time">30–45 дней</div></div></div>
+        <button onclick="openMiniApp()" class="svc-link">Обсудить проект <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      </div>
+      <div class="svc-card tilt rv d2" style="border-color:rgba(236,72,153,.25);background:linear-gradient(135deg,rgba(123,97,255,.06),rgba(236,72,153,.04));">
+        <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#7B61FF,#ec4899);padding:4px 16px;border-radius:999px;font-size:11px;font-weight:700;color:#fff;white-space:nowrap;">🔥 Максимальный результат</div>
+        <div class="svc-ico" style="background:linear-gradient(135deg,rgba(123,97,255,.15),rgba(236,72,153,.12));">🌐</div>
+        <div class="svc-tag">Амбициозный рост · Масштаб</div>
+        <div class="svc-t">AI-трансформация бизнеса</div>
+        <div class="svc-d">Полное внедрение AI во все отделы: продажи, маркетинг, HR, операции, аналитика. Ставим AI-команду, которая работает вместо людей на рутине. Бизнес выходит на новый уровень.</div>
+        <div class="svc-meta"><div><div class="svc-price">от 900 000 ₽</div><div class="svc-time">60–90 дней</div></div></div>
+        <button onclick="openMiniApp()" class="svc-link" style="color:var(--magenta);">Обсудить проект <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
       </div>
     </div>
   </div>
@@ -969,29 +1150,169 @@
       <h2 class="section-title">Что говорят клиенты</h2>
       <p class="section-sub">Реальные результаты из реальных проектов.</p>
     </div>
-    <div class="proof-grid">
-      <div class="proof-card rv">
-        <div class="stars">★★★★★</div>
-        <p class="proof-q">Раньше тратила 3 часа в день на ответы в Telegram. Теперь бот отвечает за меня — а клиент уже записан на сессию.</p>
-        <div class="proof-auth">
-          <div class="proof-ava" style="background:linear-gradient(135deg,#7B61FF,#00D9FF);">А</div>
-          <div><div class="proof-nm">Анна К.</div><div class="proof-rl">Коуч по отношениям</div></div>
+    <div class="proof-slider">
+      <div class="proof-track" id="proofTrack">
+
+        <div class="proof-slide proof-card">
+          <div class="stars">★★★★★</div>
+          <p class="proof-q">Раньше тратила 3 часа в день на ответы в Telegram. Теперь бот отвечает за меня — а клиент уже записан на сессию. Освободилось время на саму работу с людьми.</p>
+          <div class="proof-auth">
+            <div class="proof-ava" style="background:linear-gradient(135deg,#7B61FF,#00D9FF);">А</div>
+            <div><div class="proof-nm">Анна К.</div><div class="proof-rl">Коуч по отношениям</div></div>
+          </div>
+        </div>
+
+        <div class="proof-slide proof-card">
+          <div class="stars">★★★★★</div>
+          <p class="proof-q">Контент-машина делает за меня 12 постов в неделю. Я только записываю 10 минут голоса — остальное AI. Никогда не думал, что такое вообще реально.</p>
+          <div class="proof-auth">
+            <div class="proof-ava" style="background:linear-gradient(135deg,#FF006E,#7B61FF);">М</div>
+            <div><div class="proof-nm">Михаил Р.</div><div class="proof-rl">Фитнес-блогер, 180к подписчиков</div></div>
+          </div>
+        </div>
+
+        <div class="proof-slide proof-card">
+          <div class="stars">★★★★★</div>
+          <p class="proof-q">Автоматизировали приём заявок. Раньше 2 менеджера не справлялись. Теперь один — и то не весь день занят. Конверсия в сделку выросла на 34%.</p>
+          <div class="proof-auth">
+            <div class="proof-ava" style="background:linear-gradient(135deg,#00D9FF,#22c55e);">С</div>
+            <div><div class="proof-nm">Сервис доставки «Свежо»</div><div class="proof-rl">~30 сотрудников, Москва</div></div>
+          </div>
+        </div>
+
+        <div class="proof-slide proof-card">
+          <div class="stars">★★★★★</div>
+          <p class="proof-q">Запустили AI-воронку для онлайн-школы — за первый месяц она обработала 340 заявок и записала 89 человек на пробный урок. Раньше на это уходили дни ручной работы.</p>
+          <div class="proof-auth">
+            <div class="proof-ava" style="background:linear-gradient(135deg,#0ea5e9,#7B61FF);">Ю</div>
+            <div><div class="proof-nm">Юлия В.</div><div class="proof-rl">Онлайн-школа английского, 2000+ учеников</div></div>
+          </div>
+        </div>
+
+        <div class="proof-slide proof-card">
+          <div class="stars">★★★★★</div>
+          <p class="proof-q">Сделали базу знаний для команды из 14 человек. Теперь новый сотрудник за 2 дня входит в курс дела самостоятельно. Мы сократили время онбординга с 3 недель до 4 дней.</p>
+          <div class="proof-auth">
+            <div class="proof-ava" style="background:linear-gradient(135deg,#22c55e,#0ea5e9);">Д</div>
+            <div><div class="proof-nm">Дмитрий Л.</div><div class="proof-rl">Владелец digital-агентства</div></div>
+          </div>
+        </div>
+
+        <div class="proof-slide proof-card">
+          <div class="stars">★★★★★</div>
+          <p class="proof-q">Я психолог и долго боялась, что AI звучит «неживо». Олеся настроила ассистента в моём стиле — клиенты думают, что это я. Запись выросла вдвое за первые две недели.</p>
+          <div class="proof-auth">
+            <div class="proof-ava" style="background:linear-gradient(135deg,#ec4899,#7B61FF);">И</div>
+            <div><div class="proof-nm">Инна С.</div><div class="proof-rl">Психолог, частная практика</div></div>
+          </div>
+        </div>
+
+        <div class="proof-slide proof-card">
+          <div class="stars">★★★★★</div>
+          <p class="proof-q">Построили AI операционный центр для нашего ресторанного холдинга. Заявки, отчёты, коммуникации с поставщиками — всё автоматом. Экономим 60+ часов в неделю командой.</p>
+          <div class="proof-auth">
+            <div class="proof-ava" style="background:linear-gradient(135deg,#f97316,#ec4899);">Р</div>
+            <div><div class="proof-nm">Роман Д.</div><div class="proof-rl">CEO, ресторанный холдинг, 4 заведения</div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="proof-nav">
+      <button class="proof-arrow" id="proofPrev" aria-label="Назад">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="proof-dots" id="proofDots"></div>
+      <button class="proof-arrow" id="proofNext" aria-label="Вперёд">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT ══════════════════════════════════════════════════════ -->
+<section class="section" id="about" style="border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="rv" style="text-align:center; max-width:640px; margin:0 auto 48px;">
+      <div class="badge" style="margin-bottom:20px;">Обо мне</div>
+      <p style="font-size:clamp(17px,2.4vw,22px); font-weight:700; line-height:1.5; letter-spacing:-.02em;">
+        Можно прийти с одной задачей или с запросом на систему — найду решение, которое станет реальной опорой в работе.
+      </p>
+    </div>
+
+    <div class="rv" style="display:flex; align-items:center; gap:56px; flex-wrap:wrap;">
+
+      <!-- Photo -->
+      <div style="flex-shrink:0; width:260px; margin:0 auto;">
+        <div style="width:260px; height:320px; border-radius:24px; overflow:hidden; border:1px solid var(--border); background:rgba(123,97,255,.08); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; color:var(--muted);">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="opacity:.35;">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/>
+          </svg>
+          <span style="font-size:12px; opacity:.4;">фото скоро</span>
         </div>
       </div>
-      <div class="proof-card rv d1">
-        <div class="stars">★★★★★</div>
-        <p class="proof-q">Контент-машина делает за меня 12 постов в неделю. Я только записываю 10 минут голоса. Никогда не думал, что это реально.</p>
-        <div class="proof-auth">
-          <div class="proof-ava" style="background:linear-gradient(135deg,#FF006E,#7B61FF);">М</div>
-          <div><div class="proof-nm">Михаил Р.</div><div class="proof-rl">Фитнес-блогер, 180к подписчиков</div></div>
+
+      <!-- Text -->
+      <div style="flex:1; min-width:280px;">
+        <div style="font-size:22px; font-weight:800; margin-bottom:4px; letter-spacing:-.02em;">Олеся Лиханова</div>
+        <div style="font-size:14px; color:var(--cyan); font-weight:600; text-transform:uppercase; letter-spacing:.08em; margin-bottom:28px;">Эксперт по внедрению AI</div>
+
+        <p style="color:var(--muted); line-height:1.75; margin-bottom:16px; font-size:15px;">
+          Более <strong style="color:var(--text);">15 лет в бизнесе</strong> — я знаю, как изнутри устроены процессы, где возникает хаос, на чём теряются деньги и почему всё часто держится на собственнике.
+        </p>
+        <p style="color:var(--muted); line-height:1.75; margin-bottom:16px; font-size:15px;">
+          Более <strong style="color:var(--text);">3 лет работаю с нейросетями</strong>, постоянно обучаюсь и внедряю новые AI-решения для экспертов, малого и среднего бизнеса: от ассистентов и баз знаний до автоматизации процессов и контент-систем.
+        </p>
+        <p style="color:var(--muted); line-height:1.75; font-size:15px;">
+          Мой опыт в аналитике, маркетинге, запуске стартапов с нуля, бизнес-процессах и международной работе помогает мне создавать не просто AI-инструменты, а решения, которые реально разгружают, ускоряют работу и помогают расти без лишнего хаоса.
+        </p>
+
+        <div style="display:flex; gap:20px; margin-top:28px; flex-wrap:wrap;">
+          <div style="text-align:center;">
+            <div style="font-size:28px; font-weight:900; background:linear-gradient(135deg,var(--purple),var(--cyan)); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">15+</div>
+            <div style="font-size:12px; color:var(--muted); font-weight:500; margin-top:2px;">лет в бизнесе</div>
+          </div>
+          <div style="width:1px; background:var(--border);"></div>
+          <div style="text-align:center;">
+            <div style="font-size:28px; font-weight:900; background:linear-gradient(135deg,var(--purple),var(--cyan)); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">3+</div>
+            <div style="font-size:12px; color:var(--muted); font-weight:500; margin-top:2px;">года с AI</div>
+          </div>
+          <div style="width:1px; background:var(--border);"></div>
+          <div style="text-align:center;">
+            <div style="font-size:28px; font-weight:900; background:linear-gradient(135deg,var(--purple),var(--cyan)); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">30+</div>
+            <div style="font-size:12px; color:var(--muted); font-weight:500; margin-top:2px;">проектов</div>
+          </div>
         </div>
       </div>
-      <div class="proof-card rv d2">
-        <div class="stars">★★★★★</div>
-        <p class="proof-q">Автоматизировали приём заявок. Раньше 2 менеджера не справлялись. Теперь один — и то не весь день занят. Конверсия выросла на 34%.</p>
-        <div class="proof-auth">
-          <div class="proof-ava" style="background:linear-gradient(135deg,#00D9FF,#22c55e);">С</div>
-          <div><div class="proof-nm">Сервис доставки «Свежо»</div><div class="proof-rl">~30 сотрудников, Москва</div></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VALUE STATEMENT ════════════════════════════════════════════ -->
+<section class="section" style="border-top:1px solid var(--border); padding:64px 0;">
+  <div class="container">
+    <div class="rv" style="max-width:760px; margin:0 auto; text-align:center;">
+      <div class="badge" style="margin-bottom:24px;">Для кого это</div>
+      <p style="font-size:clamp(18px,2.8vw,26px); font-weight:700; line-height:1.5; margin-bottom:20px; letter-spacing:-.02em;">
+        AI-решения для бизнеса и экспертов, которые снижают ручную нагрузку,<br class="d-none-mob"> ускоряют процессы и сохраняют клиентов, заявки и важные знания внутри команды.
+      </p>
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:32px; max-width:720px; margin-left:auto; margin-right:auto;">
+        <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(0,217,255,.07); border:1px solid rgba(0,217,255,.18); border-radius:16px; padding:16px 20px; text-align:left;">
+          <span style="font-size:20px; flex-shrink:0;">🌙</span>
+          <div><div style="font-size:14px;font-weight:700;margin-bottom:3px;">Отвечает в 3 часа ночи без вас</div><div style="font-size:12px;color:var(--muted);line-height:1.5;">Клиент написал — AI ответил, закрыл возражение и записал на встречу. Вы узнаёте об этом утром.</div></div>
+        </div>
+        <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(123,97,255,.07); border:1px solid rgba(123,97,255,.18); border-radius:16px; padding:16px 20px; text-align:left;">
+          <span style="font-size:20px; flex-shrink:0;">🎯</span>
+          <div><div style="font-size:14px;font-weight:700;margin-bottom:3px;">Ни одна заявка больше не пропадёт</div><div style="font-size:12px;color:var(--muted);line-height:1.5;">AI перехватывает каждый контакт, фиксирует, напоминает и сам пишет текст для ответа.</div></div>
+        </div>
+        <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(34,197,94,.07); border:1px solid rgba(34,197,94,.18); border-radius:16px; padding:16px 20px; text-align:left;">
+          <span style="font-size:20px; flex-shrink:0;">📈</span>
+          <div><div style="font-size:14px;font-weight:700;margin-bottom:3px;">Вы думаете о росте — AI делает рутину</div><div style="font-size:12px;color:var(--muted);line-height:1.5;">Пока AI обрабатывает заявки, пишет контент и ведёт клиентов — вы занимаетесь стратегией.</div></div>
+        </div>
+        <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(236,72,153,.07); border:1px solid rgba(236,72,153,.18); border-radius:16px; padding:16px 20px; text-align:left;">
+          <span style="font-size:20px; flex-shrink:0;">🧠</span>
+          <div><div style="font-size:14px;font-weight:700;margin-bottom:3px;">Ваши знания работают без вас</div><div style="font-size:12px;color:var(--muted);line-height:1.5;">Скрипты, регламенты, ответы на вопросы — AI знает всё и передаёт это клиентам и команде.</div></div>
         </div>
       </div>
     </div>
@@ -1002,69 +1323,88 @@
 <section class="section" id="pricing" style="border-top:1px solid var(--border);">
   <div class="container">
     <div class="tc rv">
-      <div class="badge">Тарифы</div>
-      <h2 class="section-title">Стоимость и сроки</h2>
-      <p class="section-sub">Прозрачные цены. Никаких скрытых платежей и ежемесячных подписок.</p>
+      <div class="badge">Стоимость</div>
+      <h2 class="section-title">Прозрачные цены — от первого инструмента до полной системы</h2>
+      <p class="section-sub">Стоимость фиксируется на старте. Никаких скрытых платежей, ежемесячных подписок и неожиданных счётов.</p>
     </div>
-    <div class="price-grid">
+    <div class="price-grid" style="grid-template-columns:repeat(2,1fr);max-width:900px;margin-left:auto;margin-right:auto;">
 
       <div class="price-card rv">
         <div>
           <div class="p-name">Старт</div>
-          <div class="p-amt">15 000 <span class="p-per">₽</span></div>
-          <div class="p-time">2–3 дня до запуска</div>
-          <div class="p-who">Для малого бизнеса — первый шаг к автоматизации</div>
+          <div class="p-amt">20 000 — 45 000 <span class="p-per">₽</span></div>
+          <div class="p-time">⏱ 3–6 дней до запуска</div>
+          <div class="p-who">Для коучей, блогеров, фрилансеров и малого бизнеса, кто делает первый шаг к автоматизации</div>
         </div>
         <hr class="div">
         <ul class="p-feats">
-          <li><span class="ck">✓</span>Автоматизация одного процесса</li>
-          <li><span class="ck">✓</span>Подключение к 1–2 сервисам</li>
-          <li><span class="ck">✓</span>Инструкция по использованию</li>
-          <li><span class="ck">✓</span>1 неделя поддержки</li>
+          <li><span class="ck">✓</span>Один AI-инструмент под вашу задачу</li>
+          <li><span class="ck">✓</span>Настройка под ваш стиль и аудиторию</li>
+          <li><span class="ck">✓</span>Интеграция в 1–2 платформы</li>
+          <li><span class="ck">✓</span>Инструкция и сопровождение 7 дней</li>
+          <li><span class="ck">✓</span>1 раунд правок после запуска</li>
         </ul>
-        <button onclick="openMiniApp()" class="btn btn-s">Выбрать</button>
+        <button onclick="openMiniApp()" class="btn btn-s">Начать →</button>
       </div>
 
       <div class="price-card pop rv d1">
-        <div class="pop-badge">⭐ Популярный</div>
+        <div class="pop-badge">⭐ Чаще всего берут</div>
         <div>
-          <div class="p-name">Рост</div>
-          <div class="p-amt" style="background:linear-gradient(135deg,var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">20–25 000 <span style="-webkit-text-fill-color:var(--muted);font-size:16px;font-weight:400;">₽</span></div>
-          <div class="p-time">3–5 дней до запуска</div>
-          <div class="p-who">Коучи, блогеры, активные предприниматели</div>
+          <div class="p-name">Система</div>
+          <div class="p-amt" style="background:linear-gradient(135deg,var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">55 000 — 150 000 <span style="-webkit-text-fill-color:var(--muted);font-size:16px;font-weight:400;">₽</span></div>
+          <div class="p-time">⏱ 7–14 дней до запуска</div>
+          <div class="p-who">Онлайн-школы, агентства и активный малый бизнес, которым нужна связанная AI-система</div>
         </div>
         <hr class="div">
         <ul class="p-feats">
-          <li><span class="ck">✓</span>AI-ассистент <em>или</em> контент-машина</li>
-          <li><span class="ck">✓</span>Настройка под ваш голос и стиль</li>
-          <li><span class="ck">✓</span>Интеграция в Telegram / Instagram / сайт</li>
-          <li><span class="ck">✓</span>2 недели поддержки</li>
-          <li><span class="ck">✓</span>1 раунд правок включён</li>
+          <li><span class="ck">✓</span>2–3 AI-инструмента, работающих вместе</li>
+          <li><span class="ck">✓</span>Воронка, ассистент или CRM — на выбор</li>
+          <li><span class="ck">✓</span>Интеграция в 3–5 платформ и сервисов</li>
+          <li><span class="ck">✓</span>Обучение работе с системой</li>
+          <li><span class="ck">✓</span>Поддержка 30 дней + 2 раунда правок</li>
         </ul>
-        <button onclick="openMiniApp()" class="btn btn-p">Выбрать</button>
+        <button onclick="openMiniApp()" class="btn btn-p">Выбрать →</button>
       </div>
 
       <div class="price-card rv d2">
         <div>
-          <div class="p-name">Масштаб</div>
-          <div class="p-amt">от 40 000 <span class="p-per">₽</span></div>
-          <div class="p-time">5–7 дней до запуска</div>
-          <div class="p-who">Компании и бренды с командой</div>
+          <div class="p-name">AI-отдел</div>
+          <div class="p-amt">200 000 — 500 000 <span class="p-per">₽</span></div>
+          <div class="p-time">⏱ 21–45 дней до запуска</div>
+          <div class="p-who">Компании с командой 5–20 человек, где AI должен заменить целый отдел</div>
         </div>
         <hr class="div">
         <ul class="p-feats">
-          <li><span class="ck">✓</span>AI База знаний + ассистент + автоматизация</li>
-          <li><span class="ck">✓</span>Полная интеграция в бизнес-процессы</li>
-          <li><span class="ck">✓</span>Обучение команды</li>
-          <li><span class="ck">✓</span>1 месяц поддержки</li>
-          <li><span class="ck">✓</span>Приоритетная связь</li>
+          <li><span class="ck">✓</span>AI полностью берёт на себя продажи или операции</li>
+          <li><span class="ck">✓</span>Полный стек интеграций под ваши процессы</li>
+          <li><span class="ck">✓</span>Аналитика, отчёты и дашборды</li>
+          <li><span class="ck">✓</span>Обучение команды, регламенты</li>
+          <li><span class="ck">✓</span>Поддержка 60 дней + неограниченные правки</li>
         </ul>
-        <button onclick="openMiniApp()" class="btn btn-s">Обсудить</button>
+        <button onclick="openMiniApp()" class="btn btn-s">Обсудить →</button>
+      </div>
+
+      <div class="price-card rv d3" style="border-color:rgba(236,72,153,.25);background:linear-gradient(135deg,rgba(123,97,255,.05),rgba(236,72,153,.04));">
+        <div>
+          <div class="p-name">Трансформация</div>
+          <div class="p-amt" style="background:linear-gradient(135deg,#7B61FF,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">от 800 000 <span style="-webkit-text-fill-color:var(--muted);font-size:16px;font-weight:400;">₽</span></div>
+          <div class="p-time">⏱ 60–90 дней</div>
+          <div class="p-who">Средний бизнес с амбициями на кратный рост — AI внедряется во все отделы</div>
+        </div>
+        <hr class="div">
+        <ul class="p-feats">
+          <li><span class="ck">✓</span>Аудит всех бизнес-процессов</li>
+          <li><span class="ck">✓</span>AI в продажах, маркетинге, HR и операциях</li>
+          <li><span class="ck">✓</span>Единый AI-операционный центр</li>
+          <li><span class="ck">✓</span>Выделенная команда на всё время проекта</li>
+          <li><span class="ck">✓</span>Поддержка 6 месяцев, KPI и отчётность</li>
+        </ul>
+        <button onclick="openMiniApp()" class="btn btn-s" style="border-color:rgba(236,72,153,.4);color:#ec4899;">Обсудить проект →</button>
       </div>
 
     </div>
     <p class="p-note rv">
-      Не уверены, что нужно? <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer">Напишите @makedonskiy</a> — разберёмся бесплатно за 15 минут.
+      Не уверены, что нужно? <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer">Напишите в Telegram</a> — разберёмся бесплатно за 15 минут.
     </p>
   </div>
 </section>
@@ -1080,42 +1420,98 @@
 
       <div class="faq-item rv">
         <button class="faq-q">
-          Сколько времени займёт настройка?
+          Сколько времени займёт разработка и внедрение?
           <div class="faq-ch">▾</div>
         </button>
-        <div class="faq-a"><p>Обычно 2–5 рабочих дней от первого созвона до запуска. Для сложных интеграций — до 7 дней. Мы всегда называем срок заранее и придерживаемся его.</p></div>
+        <div class="faq-a"><p>Зависит от масштаба задачи. Базовые AI-решения — ассистент, контент-система, база знаний — запускаются за 3–6 дней. Умные системы второго уровня (воронки, AI CRM, онбординг) — 7–14 дней. Комплексные AI-проекты уровня отдела или операционного центра — 21–45 дней. Для трансформации бизнеса закладываем 60–90 дней. Сроки всегда фиксируются в договорённости до старта и не сдвигаются.</p></div>
       </div>
 
       <div class="faq-item rv d1">
         <button class="faq-q">
-          Мои клиенты поймут, что разговаривают с ботом?
+          Это «умные» AI-решения или просто автоответы?
           <div class="faq-ch">▾</div>
         </button>
-        <div class="faq-a"><p>В большинстве случаев — нет. Мы настраиваем ассистента в вашем стиле: тон, манера речи, типичные ответы. Клиенты воспринимают его как часть вашей команды.</p></div>
+        <div class="faq-a"><p>Это принципиально разные вещи. Простые автоответы работают по скриптам и ломаются на первом нестандартном вопросе. AI-решения, которые я создаю, понимают контекст, ведут диалог, анализируют ситуацию и принимают решения — так же, как делал бы опытный сотрудник. Они интегрируются в ваши процессы и со временем становятся умнее.</p></div>
       </div>
 
       <div class="faq-item rv d2">
         <button class="faq-q">
-          Что если меня не устроит результат?
+          Клиенты почувствуют разницу в общении?
           <div class="faq-ch">▾</div>
         </button>
-        <div class="faq-a"><p>Мы делаем правки до тех пор, пока вы не скажете «ок». Один раунд правок включён в любой тариф. Мы заинтересованы в результате — большинство наших клиентов приходят по рекомендациям.</p></div>
+        <div class="faq-a"><p>Нет — если настроить правильно. Перед запуском я глубоко изучаю вашу манеру общения, ценности, типичные ответы и стиль. AI говорит вашим голосом, использует ваши обороты и интонации. Для коучей и экспертов это особенно важно — клиенты чувствуют вас, а не «систему». Многие мои клиенты получают обратную связь: «ты стала отвечать быстрее».</p></div>
       </div>
 
       <div class="faq-item rv d3">
         <button class="faq-q">
-          Нужны ли технические знания для работы с системой?
+          Что если AI-система даст некорректный ответ клиенту?
           <div class="faq-ch">▾</div>
         </button>
-        <div class="faq-a"><p>Нет. Мы передаём готовое решение и объясняем как им пользоваться. Обычно это занимает 15–20 минут. Если в процессе возникнут вопросы — всегда на связи в Telegram.</p></div>
+        <div class="faq-a"><p>Это закрывается архитектурно. AI-система работает строго в рамках того, чем вы её наполнили: ваши материалы, регламенты, сценарии. На вопросы вне своей компетенции она не угадывает — корректно сообщает, что уточнит у вас, и передаёт диалог. Дополнительно настраиваются ограничения и зоны ответственности системы.</p></div>
       </div>
 
       <div class="faq-item rv d4">
         <button class="faq-q">
-          Какие интеграции поддерживаются?
+          Нужны ли нам технические специалисты для работы с системой?
           <div class="faq-ch">▾</div>
         </button>
-        <div class="faq-a"><p>Telegram, WhatsApp, Instagram, ВКонтакте, любой сайт, Notion, Google Sheets, AmoCRM, Bitrix24, Tilda и другие. Если вашего сервиса нет — уточните, скорее всего сделаем.</p></div>
+        <div class="faq-a"><p>Нет. Я передаю готовую систему с понятным интерфейсом и провожу обучение команды — обычно это 30–60 минут. Для управления не нужен программист: вы обновляете данные, добавляете новые сценарии и следите за аналитикой через привычные инструменты. На весь период поддержки я на связи.</p></div>
+      </div>
+
+      <div class="faq-item rv">
+        <button class="faq-q">
+          Я коуч / эксперт — AI не обесценит мою работу с клиентами?
+          <div class="faq-ch">▾</div>
+        </button>
+        <div class="faq-a"><p>Ровно наоборот. AI-система берёт на себя административный слой: первичные запросы, FAQ, запись, напоминания, онбординг. Вы перестаёте тратить 2–3 часа в день на то, что не требует вашей экспертизы. Всё ваше время и энергия идут на живую работу с клиентами — именно там ваша ценность. Клиенты в итоге получают больше вас, а не меньше.</p></div>
+      </div>
+
+      <div class="faq-item rv d1">
+        <button class="faq-q">
+          Блогерам: созданный AI контент будет звучать как мой голос?
+          <div class="faq-ch">▾</div>
+        </button>
+        <div class="faq-a"><p>Именно в этом и заключается работа. Перед запуском я анализирую ваш существующий контент, стиль, любимые конструкции и подачу. AI обучается на вашем материале — и создаёт тексты, которые вы могли бы написать сами, только быстрее. Из 10 минут голосового — полноценный контент-план на неделю во всех форматах.</p></div>
+      </div>
+
+      <div class="faq-item rv d2">
+        <button class="faq-q">
+          Какие платформы и сервисы можно подключить?
+          <div class="faq-ch">▾</div>
+        </button>
+        <div class="faq-a"><p>Мессенджеры: Telegram, WhatsApp, Instagram. CRM: AmoCRM, Bitrix24, Notion. Платформы: GetCourse, Tilda, любой сайт. Таблицы: Google Sheets, Airtable. Оплаты: ЮKassa, Robokassa, Stripe. Если ваш сервис не в списке — уточните: в большинстве случаев интеграция возможна через API.</p></div>
+      </div>
+
+      <div class="faq-item rv d3">
+        <button class="faq-q">
+          Можно начать с одного решения и расширять систему?
+          <div class="faq-ch">▾</div>
+        </button>
+        <div class="faq-a"><p>Да, и это оптимальная стратегия. Начинаете с одного AI-решения под главную боль — видите реальный результат — добавляете следующий инструмент. Каждый новый уровень встраивается в уже работающую архитектуру без переделки. Многие клиенты приходят за базовым решением, а через 2–3 месяца строят полноценную AI-систему.</p></div>
+      </div>
+
+      <div class="faq-item rv d4">
+        <button class="faq-q">
+          Чем это отличается от найма сотрудника в штат?
+          <div class="faq-ch">▾</div>
+        </button>
+        <div class="faq-a"><p>Сотрудник стоит 60–120k ₽/мес, работает 8 часов, болеет, уходит в отпуск, требует обучения и контроля. AI-система создаётся один раз, работает 24/7, масштабируется без дополнительных затрат и не уходит к конкурентам. При этом она не заменяет людей там, где важен человек — она освобождает их от рутины для осмысленной работы.</p></div>
+      </div>
+
+      <div class="faq-item rv">
+        <button class="faq-q">
+          Что включает поддержка после сдачи проекта?
+          <div class="faq-ch">▾</div>
+        </button>
+        <div class="faq-a"><p>В зависимости от уровня проекта — от 7 до 180 дней активной поддержки. Это оперативные правки, адаптация под изменения в бизнесе, помощь с обновлением данных и консультации. Я лично веду каждый проект — вы всегда общаетесь со мной, а не с поддержкой. После окончания периода поддержку можно продлить на отдельных условиях.</p></div>
+      </div>
+
+      <div class="faq-item rv d1">
+        <button class="faq-q">
+          Можно оплатить поэтапно?
+          <div class="faq-ch">▾</div>
+        </button>
+        <div class="faq-a"><p>Да. Проекты до 45 000 ₽ оплачиваются полностью до старта. От 50 000 ₽ — в два этапа: 50% до начала работ, 50% перед передачей. Для крупных проектов от 200 000 ₽ обсуждается индивидуальный график. Напишите — найдём формат, который удобен вам.</p></div>
       </div>
 
     </div>
@@ -1148,7 +1544,7 @@
 <section class="section" id="contact" style="border-top:1px solid var(--border);">
   <div class="container">
     <div class="tc rv">
-      <div class="badge">Написать нам</div>
+      <div class="badge">Написать мне</div>
       <h2 class="section-title">Оставьте заявку</h2>
       <p class="section-sub">Опишите задачу — ответим в течение часа и подберём оптимальное решение.</p>
     </div>
@@ -1181,10 +1577,9 @@
         <p class="succ-sub">Мы получили ваше сообщение и ответим в течение часа. Пока можете написать напрямую:</p>
         <div class="succ-btns">
           <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="btn btn-p">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.5 4.15 12.56c-.657-.204-.668-.657.136-.977l10.57-4.075c.547-.2 1.024.133.848.713z"/></svg>
-            Написать @makedonskiy
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.5 4.15 12.56c-.657-.204-.668-.657.136-.977l10.57-4.075c.547-.2 1.024.133.848.713z"/></svg>
+            Написать в Telegram
           </a>
-          <button class="btn btn-s" onclick="resetForm()">Отправить ещё раз</button>
         </div>
       </div>
     </div>
@@ -1200,7 +1595,7 @@
         <div class="modal-logo-ico">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
         </div>
-        Самостоятельные<span style="color:var(--cyan);">Запуски</span>
+        Олеся Лиханова<span style="color:var(--cyan);"> | Внедрение AI</span>
       </div>
       <div class="modal-progress"><div class="modal-progress-bar" id="maProgressBar" style="width:20%"></div></div>
     </div>
@@ -1287,7 +1682,7 @@
           <div class="ma-succ-icon">✅</div>
           <div class="ma-succ-title">Готово! 🚀</div>
           <p class="ma-succ-sub">Заявка принята. Чтобы ускорить процесс — напишите напрямую в Telegram.</p>
-          <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="ma-tg-btn">Написать @makedonskiy</a>
+          <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" class="ma-tg-btn">Написать в Telegram</a>
           <button class="ma-btn-secondary" onclick="closeMiniApp(); maReset();">Закрыть</button>
         </div>
       </div>
@@ -1313,17 +1708,16 @@
             <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
           </svg>
         </div>
-        СамостоятельныеЗапуски
+        Олеся Лиханова | Внедрение AI
       </div>
       <div class="foot-links">
         <a href="#">Политика конфиденциальности</a>
         <a href="#">Договор оферты</a>
       </div>
       <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);transition:color .2s;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--muted)'">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.5 4.15 12.56c-.657-.204-.668-.657.136-.977l10.57-4.075c.547-.2 1.024.133.848.713z"/></svg>
-        @makedonskiy
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.5 4.15 12.56c-.657-.204-.668-.657.136-.977l10.57-4.075c.547-.2 1.024.133.848.713z"/></svg>
       </a>
-      <p class="foot-copy">© 2026 СамостоятельныеЗапуски. Все права защищены.</p>
+      <p class="foot-copy">© 2026 Олеся Лиханова | Внедрение AI. Все права защищены.</p>
     </div>
   </div>
 </footer>
@@ -1490,7 +1884,7 @@
     return true;
   }
 
-  document.getElementById('formBtn').addEventListener('click', function() {
+  document.getElementById('formBtn').addEventListener('click', async function() {
     const fname    = document.getElementById('fname');
     const fcontact = document.getElementById('fcontact');
     const fmsg     = document.getElementById('fmsg');
@@ -1502,10 +1896,20 @@
     this.disabled = true;
     this.innerHTML = '<div class="spinner"></div> Отправляем...';
 
-    // Simulate send delay → show success
-    setTimeout(() => {
+    const text = `📩 Новая заявка с лендинга (форма внизу)\n\n👤 Имя: ${fname.value.trim()}\n📞 Контакт: ${fcontact.value.trim()}\n📝 Задача: ${fmsg.value.trim() || '—'}`;
+    try {
+      const res = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: TG_CHAT, text })
+      });
+      if (!res.ok) throw new Error();
       document.getElementById('contactCard').classList.add('sent');
-    }, 1100);
+    } catch {
+      this.disabled = false;
+      this.innerHTML = 'Отправить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+      alert('Ошибка отправки. Напишите напрямую в Telegram');
+    }
   });
 
   window.resetForm = function() {
@@ -1518,6 +1922,36 @@
     btn.disabled = false;
     btn.innerHTML = 'Отправить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
   };
+
+  // ── Reviews Slider ───────────────────────────────────────────
+  (function() {
+    const track = document.getElementById('proofTrack');
+    const dotsEl = document.getElementById('proofDots');
+    if (!track) return;
+    const slides = track.querySelectorAll('.proof-slide');
+    const total = slides.length;
+    const perPage = window.innerWidth < 700 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+    let cur = 0;
+    const pages = Math.ceil(total / perPage);
+
+    // build dots
+    for (let i = 0; i < pages; i++) {
+      const d = document.createElement('div');
+      d.className = 'proof-dot' + (i === 0 ? ' active' : '');
+      d.addEventListener('click', () => goTo(i));
+      dotsEl.appendChild(d);
+    }
+
+    function goTo(page) {
+      cur = Math.max(0, Math.min(page, pages - 1));
+      const slideW = slides[0].offsetWidth + 20;
+      track.style.transform = `translateX(-${cur * perPage * slideW}px)`;
+      dotsEl.querySelectorAll('.proof-dot').forEach((d, i) => d.classList.toggle('active', i === cur));
+    }
+
+    document.getElementById('proofPrev').addEventListener('click', () => goTo(cur - 1));
+    document.getElementById('proofNext').addEventListener('click', () => goTo(cur + 1));
+  })();
 
   // ── MiniApp Modal ────────────────────────────────────────────
   const TG_TOKEN = '8660313325:AAFdtyoYTbYYnhT8Fxs2ySlnzx4XRbQP3Fk';
@@ -1577,7 +2011,7 @@
     } catch {
       btn.disabled = false;
       btn.innerHTML = 'Отправить заявку →';
-      errEl.textContent = 'Ошибка отправки. Напишите напрямую: @makedonskiy';
+      errEl.textContent = 'Ошибка отправки. Напишите напрямую в Telegram';
     }
   };
   window.maReset = function() {
