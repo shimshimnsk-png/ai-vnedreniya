@@ -88,7 +88,7 @@ export default function App() {
           <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
             <Code2 className="w-5 h-5" />
           </div>
-          <span>Самостоятельные<span className="text-blue-500">Запуски</span></span>
+          <span>Олеся Лиханова<span className="text-blue-500"> | Внедрение AI</span></span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
           <a href="#who" className="hover:text-white transition-colors">Для кого</a>
@@ -278,13 +278,13 @@ export default function App() {
         </div>
         <div className="flex flex-col md:flex-row items-center gap-8 p-8 rounded-3xl bg-white/[0.03] border border-white/10">
           <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-4xl shrink-0 shadow-lg shadow-blue-500/20">
-            А
+            О
           </div>
           <div>
             <p className="text-lg text-gray-300 leading-relaxed mb-4">
-              «Меня зовут Александр. Я внедряю ИИ-решения с 2022 года — сначала для своих проектов, потом для клиентов. Всё, что вы видите на этом сайте, я делаю сам и несу личную ответственность за результат.»
+              «Меня зовут Олеся. Более 3 лет работаю с нейросетями — внедряю AI-решения для экспертов, малого и среднего бизнеса: от ассистентов и баз знаний до автоматизации процессов и контент-систем. Каждый проект веду лично.»
             </p>
-            <p className="text-blue-400 font-semibold">Александр — основатель СамостоятельныеЗапуски</p>
+            <p className="text-blue-400 font-semibold">Олеся Лиханова — специалист по внедрению AI</p>
             <a href="https://t.me/makedonskiy" target="_blank" rel="noreferrer" className="text-sm text-gray-500 hover:text-white transition-colors">@makedonskiy в Telegram</a>
           </div>
         </div>
@@ -340,9 +340,9 @@ export default function App() {
       <footer className="relative z-10 max-w-7xl mx-auto px-6 py-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-gray-500 text-sm">
         <div className="flex items-center gap-2 font-bold text-lg text-white">
           <Code2 className="w-5 h-5 text-blue-500" />
-          <span>СамостоятельныеЗапуски</span>
+          <span>Олеся Лиханова | Внедрение AI</span>
         </div>
-        <p>© 2026 СамостоятельныеЗапуски. Все права защищены.</p>
+        <p>© 2026 Олеся Лиханова | Внедрение AI. Все права защищены.</p>
         <div className="flex gap-6">
           <a href="#" className="hover:text-white transition-colors">Политика конфиденциальности</a>
           <a href="#" className="hover:text-white transition-colors">Договор оферты</a>
