@@ -731,6 +731,15 @@
       .foot-links{flex-wrap:wrap;justify-content:center}
       /* Кнопка в шапке — скрыть, остаётся бургер */
       .nav-r>.btn{display:none}
+      /* Статистика в мокапах — показать строчно */
+      .fcards,.fcards-l{display:flex;position:static;flex-direction:row;gap:8px;margin-top:12px;justify-content:center;flex-wrap:wrap}
+      .fcard{white-space:normal;text-align:center;min-width:120px}
+      /* Кнопка Обсудить проект — стиль кнопки */
+      .svc-link{display:flex;justify-content:center;width:100%;padding:10px 16px;border-radius:10px;border:1px solid rgba(123,97,255,.35);font-size:15px;background:rgba(123,97,255,.08)}
+      /* Бейдж Максимальный результат — внутрь карточки */
+      .svc-card{overflow:visible}
+      .svc-promo{padding-top:32px!important}
+      .svc-promo-badge{top:12px!important;position:relative!important;left:auto!important;transform:none!important;display:inline-block;margin-bottom:12px}
       /* Отзывы — по одному на экране */
       .proof-slide{flex:0 0 100%}
       /* Секция обо мне — по центру */
@@ -1021,7 +1030,7 @@
     <div class="tc rv">
       <div class="badge">Что я создаю</div>
       <h2 class="section-title">AI-решения от простого к системному</h2>
-      <p class="section-sub">Каждый найдёт своё — или возьмёт несколько и выстроит полноценную AI-систему. Напишите мне, и подберём вместе.</p>
+      <p class="section-sub" style="color:rgba(220,220,232,0.75);">Каждый найдёт своё — или возьмёт несколько и выстроит полноценную AI-систему. Вместе выберем то, что действительно пригодится вашему бизнесу.</p>
     </div>
 
     <!-- Уровень 1 -->
@@ -1113,8 +1122,8 @@
         <div class="svc-meta"><div><div class="svc-price">от 450 000 ₽</div><div class="svc-time">30–45 дней</div></div></div>
         <button onclick="openMiniApp()" class="svc-link">Обсудить проект <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
       </div>
-      <div class="svc-card tilt rv d2" style="border-color:rgba(236,72,153,.25);background:linear-gradient(135deg,rgba(123,97,255,.06),rgba(236,72,153,.04));">
-        <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#7B61FF,#ec4899);padding:4px 16px;border-radius:999px;font-size:11px;font-weight:700;color:#fff;white-space:nowrap;">🔥 Максимальный результат</div>
+      <div class="svc-card svc-promo tilt rv d2" style="border-color:rgba(236,72,153,.25);background:linear-gradient(135deg,rgba(123,97,255,.06),rgba(236,72,153,.04));">
+        <div class="svc-promo-badge" style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#7B61FF,#ec4899);padding:4px 16px;border-radius:999px;font-size:11px;font-weight:700;color:#fff;white-space:nowrap;">🔥 Максимальный результат</div>
         <div class="svc-ico" style="background:linear-gradient(135deg,rgba(123,97,255,.15),rgba(236,72,153,.12));">🌐</div>
         <div class="svc-tag">Амбициозный рост · Масштаб</div>
         <div class="svc-t">AI-трансформация бизнеса</div>
