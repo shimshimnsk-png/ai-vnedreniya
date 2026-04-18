@@ -6,10 +6,6 @@ import {
   Building2, Building, Loader2
 } from "lucide-react";
 
-// ⚙️ Вставь свои данные:
-const TG_BOT_TOKEN = "8660313325:AAFdtyoYTbYYnhT8Fxs2ySlnzx4XRbQP3Fk";
-const TG_CHAT_ID = "863795906";
-
 type Step = "welcome" | "select-niche" | "select-service" | "details" | "success";
 
 const STEP_NUMBERS: Record<Step, number> = {
@@ -92,24 +88,13 @@ export default function MiniApp() {
     setSendError("");
     setSending(true);
 
-    const text =
-      `📩 Новая заявка с MiniApp\n\n` +
-      `👤 Категория: ${niche}\n` +
-      `🔧 Услуга: ${service}\n` +
-      `🏢 Проект/компания: ${projectName || "—"}\n` +
-      `📝 Задача: ${taskDesc || "—"}\n` +
-      `📞 Контакт: ${contact}`;
-
     try {
-      const res = await fetch(
-        `https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ chat_id: TG_CHAT_ID, text }),
-        }
-      );
-      if (!res.ok) throw new Error("Telegram API error");
+      const res = await fetch("/.netlify/functions/send-telegram", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ niche, service, projectName, taskDesc, contact }),
+      });
+      if (!res.ok) throw new Error("Send failed");
       setStep("success");
     } catch {
       setSendError("Ошибка отправки. Напишите напрямую: @makedonskiy");
