@@ -20,22 +20,30 @@ export async function handler(event) {
     return { statusCode: 400, body: JSON.stringify({ error: "Invalid JSON" }) };
   }
 
-  const { niche, service, projectName, taskDesc, contact } = payload;
-
-  if (!contact || typeof contact !== "string" || !contact.trim()) {
-    return { statusCode: 400, body: JSON.stringify({ error: "Contact required" }) };
-  }
-
   const clean = (v, max = 500) =>
     (typeof v === "string" ? v : "").slice(0, max).replace(/[<>]/g, "");
 
-  const text =
-    `📩 Новая заявка с MiniApp\n\n` +
-    `👤 Категория: ${clean(niche, 100) || "—"}\n` +
-    `🔧 Услуга: ${clean(service, 100) || "—"}\n` +
-    `🏢 Проект/компания: ${clean(projectName, 200) || "—"}\n` +
-    `📝 Задача: ${clean(taskDesc, 1000) || "—"}\n` +
-    `📞 Контакт: ${clean(contact, 200)}`;
+  const contact = clean(payload.contact, 200);
+  if (!contact.trim()) {
+    return { statusCode: 400, body: JSON.stringify({ error: "Contact required" }) };
+  }
+
+  let text;
+  if (payload.source === "contact") {
+    text =
+      `📩 Новая заявка с лендинга (форма внизу)\n\n` +
+      `👤 Имя: ${clean(payload.name, 200) || "—"}\n` +
+      `📞 Контакт: ${contact}\n` +
+      `📝 Задача: ${clean(payload.message, 1000) || "—"}`;
+  } else {
+    text =
+      `📩 Новая заявка с MiniApp\n\n` +
+      `👤 Категория: ${clean(payload.niche, 100) || "—"}\n` +
+      `🔧 Услуга: ${clean(payload.service, 100) || "—"}\n` +
+      `🏢 Проект/компания: ${clean(payload.projectName, 200) || "—"}\n` +
+      `📝 Задача: ${clean(payload.taskDesc, 1000) || "—"}\n` +
+      `📞 Контакт: ${contact}`;
+  }
 
   try {
     const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {

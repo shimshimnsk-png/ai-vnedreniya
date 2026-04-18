@@ -1926,12 +1926,16 @@
     this.disabled = true;
     this.innerHTML = '<div class="spinner"></div> Отправляем...';
 
-    const text = `📩 Новая заявка с лендинга (форма внизу)\n\n👤 Имя: ${fname.value.trim()}\n📞 Контакт: ${fcontact.value.trim()}\n📝 Задача: ${fmsg.value.trim() || '—'}`;
     try {
-      const res = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+      const res = await fetch('/.netlify/functions/send-telegram', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chat_id: TG_CHAT, text })
+        body: JSON.stringify({
+          source: 'contact',
+          name: fname.value.trim(),
+          contact: fcontact.value.trim(),
+          message: fmsg.value.trim()
+        })
       });
       if (!res.ok) throw new Error();
       document.getElementById('contactCard').classList.add('sent');
@@ -1984,8 +1988,6 @@
   })();
 
   // ── MiniApp Modal ────────────────────────────────────────────
-  const TG_TOKEN = '8660313325:AAFdtyoYTbYYnhT8Fxs2ySlnzx4XRbQP3Fk';
-  const TG_CHAT  = '863795906';
   let maNiche = '', maService = '';
 
   window.openMiniApp = function() {
@@ -2030,11 +2032,17 @@
     errEl.textContent = '';
     btn.disabled = true;
     btn.innerHTML = '<div class="ma-spinner"></div> Отправляем...';
-    const text = `📩 Новая заявка с лендинга\n\n👤 Категория: ${maNiche}\n🔧 Услуга: ${maService}\n🏢 Проект: ${project||'—'}\n📝 Задача: ${task||'—'}\n📞 Контакт: ${contact}`;
     try {
-      const res = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+      const res = await fetch('/.netlify/functions/send-telegram', {
         method:'POST', headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({ chat_id: TG_CHAT, text })
+        body: JSON.stringify({
+          source: 'mini',
+          niche: maNiche,
+          service: maService,
+          projectName: project,
+          taskDesc: task,
+          contact
+        })
       });
       if (!res.ok) throw new Error();
       maGoTo('success');
